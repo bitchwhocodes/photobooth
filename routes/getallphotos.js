@@ -20,32 +20,21 @@ var objToJSON ={};
 
 blobSvc.listBlobsSegmented('images', null, function(error, result, response){
 if(!error){
-			    // result contains the entries
+
 	var len = result.entries.length;
 	for(var i=0;i<len;i++)
-		{
-			    	
+		{	    	
 			var uri = blobSvc.getUrl(containerName, result.entries[i].name, null, hostName);
 			urls.push(uri);
 		}
-
-
-	}else{
-			  	
 	}
 
-	
 	objToJSON.result = urls;
 	objToJSON.error = error;
 	res.writeHead(200, {"Content-Type": "application/json"});
 	res.write(JSON.stringify(objToJSON));
 
 	});
-
-
-
-
-
 });
 
 module.exports = router;

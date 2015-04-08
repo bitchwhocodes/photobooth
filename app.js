@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var getallphotos = require('./routes/getallphotos');
+var takephoto = require('./routes/takephoto');
 
 
 
@@ -31,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/email',emailroute);
 app.use('/getallphotos',getallphotos);
+app.use('/takephoto',takephoto);
 
 //app.use('/photos',getphotos);
 //app.use('/savephoto',savephotos.savephoto);
