@@ -6,10 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
+var getallphotos = require('./routes/getallphotos');
 
 
-var getphotos = require('./routes/getphotos')
-var savephotos = require('./routes/savephotos')
 
 var azure = require('azure');
 var emailroute = require('./routes/email');
@@ -31,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/email',emailroute);
-
+app.use('/getallphotos',getallphotos);
 
 //app.use('/photos',getphotos);
 //app.use('/savephoto',savephotos.savephoto);
