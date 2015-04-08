@@ -22,7 +22,7 @@ a {
     }
     .container {
         height: 100%;
-        background: #f0e68c;
+        background: #000;
         float:left;
         width:100%;
     }
@@ -41,23 +41,76 @@ a {
     }
 
     .number{
-        font-size:48px;
-        color:#fff;
-        position:absolute;
-        top:90px;
-        left:90px;
-        font-family:'Arial';
-
+        font-size:150px;
+        color:#e81f63;
+        position:relative;
+        line-height:0px;
+        width:100%;
+        text-align:center;
+        font-family:'Moon'
+ 
+    letter-spacing: .05em;
+    text-shadow: 
+      2px 2px 0px #d5d5d5, 
+      3px 3px 0px rgba(0, 0, 0, 0.2);
     }
+
+
+
+    .blue.countdown-container{
+         background-color:#06bcd3;
+    }
+
+    .blue.countdown-container .number{
+        color:#000;
+    }
+
+  
+
 
     .countdown{
         border-radius: 50%;
-        width: 200px;
-        height: 200px; 
-        background-color:#ff4400;
+        width: 300px;
+        height: 300px; 
+        background-color:#000;
+        margin:0 auto;
+        border:solid white 10px;
         /* width and height can be anything, as long as they're equal */
+     }
+
+.countdown-container{
+    background-color: #e81f63;
 }
 
+.countdown-container h2{
+    width:100%;
+    text-align:center;
+    font-size:48px;
+
+}
+
+   .black.countdown-container{
+         background-color:#fff;
+    }
+
+    .black.countdown-container .number{
+        color:#000;
+ text-shadow: 
+      2px 2px 0px #06bcd3, 
+      3px 3px 0px rgba(0, 0, 0, 0.2);
+
+    }
+
+
+
+      .black.countdown-container{
+         background-color:#000;
+    }
+    .black.countdown-container .countdown{
+        color:#fff;
+        border:solid #06bcd3 10px;
+        background-color:#fff;
+    }
 
 .activate h2{
     width:100%;
@@ -89,6 +142,10 @@ a {
 
        background-color:#e81f63; 
 }
+
+
+
+
 
 /* orange
 #ef4437

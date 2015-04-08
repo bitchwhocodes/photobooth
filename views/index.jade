@@ -2,11 +2,16 @@ extends layout
 block content
 	div.idle.container.hide
 		h2 Idle screen
-		div.images
-	div.activate.show.section
+		ul.images
+			each val in urls
+				li
+					img(src=val)
+	div.activate.hide.section
 		h2 Hello. Take your photo?
-		button(name="photo") Take Photo
-	div.container.hide
+		button(name="photo") Let's do it!
+		
+	
+	div.container.countdown-container.show
 		h2 Photo Countdown
 		div.countdown
 			p.number 1

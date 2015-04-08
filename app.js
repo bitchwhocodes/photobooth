@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var getphotos = require('./routes/getphotos')
+var getphotos = require('./routes/savephotos')
 
 var azure = require('azure');
 
@@ -28,7 +30,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-
+//app.use('/photos',getphotos);
+//app.use('/savephoto',savephotos.savephoto);
+//app.use('/listphoto',savephotos.listphoto);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
