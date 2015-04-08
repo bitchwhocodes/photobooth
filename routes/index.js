@@ -56,7 +56,7 @@ serviceBusService.receiveSubscriptionMessage('photos', 'AllMessages', { isPeekLo
 });
 
  */
-
+var urls=[];
    
     res.render('index', { title: 'Express',urls:urls });
 console.log(urls);	 
