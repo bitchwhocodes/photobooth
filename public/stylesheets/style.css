@@ -55,18 +55,51 @@ a {
       3px 3px 0px rgba(0, 0, 0, 0.2);
     }
 
+    .countdown img{
+        width:50%;
+        margin-left:80px;
+        margin-top:70px;
+    }
 
+    .click-text{
+      width:100%;
+      text-align:center;
+     font-size:48px;        
+    }
+
+ .lime.countdown-container{
+       background-color:#AFB42B;
+    }
+
+     .lime.countdown-container .number{
+        color:#AFB42B;
+    }
+   
+    .orange.countdown-container{
+       background-color:#D32F2F;
+    }
+
+     .orange.countdown-container .number{
+        color:#D32F2F;
+    }
+
+  
 
     .blue.countdown-container{
          background-color:#06bcd3;
     }
 
     .blue.countdown-container .number{
-        color:#000;
+        color:#06bcd3;
     }
 
-  
+     .pink.countdown-container{
+        background-color: #e81f63;
+    }
 
+    .pink.countdown-container .number{
+        color:#e81f63;
+    }
 
     .countdown{
         border-radius: 50%;
@@ -95,7 +128,7 @@ a {
 
     .black.countdown-container .number{
         color:#000;
- text-shadow: 
+        text-shadow: 
       2px 2px 0px #06bcd3, 
       3px 3px 0px rgba(0, 0, 0, 0.2);
 
