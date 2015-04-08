@@ -10,11 +10,12 @@ var getallphotos = require('./routes/getallphotos');
 var takephoto = require('./routes/takephoto');
 
 
-
 var azure = require('azure');
 var emailroute = require('./routes/email');
 
 var app = express();
+
+
 
 
 // view engine setup

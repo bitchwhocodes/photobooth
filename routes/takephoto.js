@@ -6,12 +6,12 @@ var azure = require("azure");
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.writeHead(200, {"Content-Type": "application/json"});
+ 
   	var serviceBusService = azure.createServiceBusService(process.env.AZURE_SERVICE_ENDPOINT);
   	var message = {
-    body: 'take photo stacey',
+    body: 'take photo',
     customProperties: {
-        messagenumber: 0
+        messagetype: 0
 	    }
 	}
 
@@ -21,51 +21,36 @@ router.get('/', function(req, res, next) {
       }
     });
 
-	 var counter = 0;
+	 
+	
 
 	  	serviceBusService.receiveSubscriptionMessage('photos', 'AllMessages', { isPeekLock: true }, function(error, lockedMessage){
 	    if(!error){
+	   
+	    	if(lockedMessage.customProperties.messagetype =='1')
+	    	{
+	    		var objToJSON ={};
+	    		var blobSvc = azure.createBlobService(process.env.AZURE_BLOB_NAME,process.env.AZURE_BLOB_ENDPOINT);
+	    		var containerName = 'images';
+	    		var hostName = 'https://nasaphotobooth.blob.core.windows.net';
+				var url = blobSvc.getUrl(containerName, lockedMessage.body, null, hostName);
+	    		objToJSON.result = url;
+				objToJSON.error = error;
+				 res.writeHead(200, {"Content-Type": "application/json"});
+				 res.write(JSON.stringify(objToJSON));
+				 res.end();
+				 return;
 	    	
+	    	}
 	    	//clearInterval(interval);
-	    
-	    	var objToJSON ={};
-	    	objToJSON.result = lockedMessage;
-			objToJSON.error = error;
-			res.write(JSON.stringify(objToJSON));
+	        
 	    	
        		
 	    }else{
-	    	console.log(error);
+	    	if (err) send(req,res,err,500);
 	    	//clearInterval(interval);
 	    }
 
-	    /*
-	 var interval = setInterval( function() {
-	 	 	serviceBusService.receiveSubscriptionMessage('photos', 'AllMessages', { isPeekLock: true }, function(error, lockedMessage){
-	    if(!error){
-	    	
-	    	clearInterval(interval);
-	    
-	    	var objToJSON ={};
-	    	objToJSON.result = lockedMessage;
-			objToJSON.error = error;
-			
-			res.write(JSON.stringify(objToJSON));
-	    	
-       		
-	    }else{
-	    	console.log(error);
-	    	clearInterval(interval);
-	    }
-	 
-
-	    console.log(interval);
-	    console.log("shit stacey"+(counter++))
-	  
-	     
-	}, 5000);
-
-*/
 
 
 	  	

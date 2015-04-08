@@ -11,19 +11,18 @@ block content
 		button(name="photo") Let's do it!
 		
 	
-	div.container.countdown-container.show
+	div.container.countdown-container.hide
 		h2 Photo Countdown
-		
-			
 		div.countdown
 			p.number.fadeUp 3
 			img.hide(src='images/camera.png')
 
 		p.click-text.hide SAY CHEESE
 
-	div.container.hide
+
+	div.container.email.show
 		h2 Review Email
-		div.images
+		img.showimage
 		div.pick
 			input(type="email")
 			button(name="email") Email
