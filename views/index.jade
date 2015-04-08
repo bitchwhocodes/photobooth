@@ -1,0 +1,25 @@
+extends layout
+block content
+	div.idle.container.hide
+		h2 Idle screen
+		div.images
+	div.activate.show.section
+		h2 Hello. Take your photo?
+		button(name="photo") Take Photo
+	div.container.hide
+		h2 Photo Countdown
+		div.countdown
+			p.number 1
+
+	div.container.hide
+		h2 Review Email
+		div.images
+		div.pick
+			input(type="email")
+			button(name="email") Email
+		div.progress
+		div.message
+			p There was an error
+
+
+
