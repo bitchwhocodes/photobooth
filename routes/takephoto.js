@@ -39,7 +39,7 @@ router.get('/', function(req, res, next) {
 				 res.writeHead(200, {"Content-Type": "application/json"});
 				 res.write(JSON.stringify(objToJSON));
 				 res.end();
-				 return;
+				 
 	    	
 	    	}
 	    	//clearInterval(interval);

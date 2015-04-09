@@ -1,34 +1,77 @@
 extends layout
 block content
-	div.idle.container.hide
-		h2 Idle screen
-		ul.images
-			each val in urls
-				li
-					img(src=val)
-	div.activate.hide.section
-		h2 Hello. Take your photo?
-		button(name="photo") Let's do it!
+
+	div.stars-holder
+		canvas#stars(width='1600' height='600')
+	div#pt-main.pt-perspective
+
+
+		div.idle.pt-page.pt-page-1
+			h2 Idle screen
+			
+		div.activate.pt-page.pt-page-2.pt-page-current
+			h2 Hello. Take your photo?
+			button.take-photo(name="photo") Let's do it!
+
+			
 		
-	
-	div.container.countdown-container.hide
-		h2 Photo Countdown
-		div.countdown
-			p.number.fadeUp 3
-			img.hide(src='images/camera.png')
+		div.countdown-container.pt-page.pt-page-3
+			h2 Photo Countdown
+			div.countdown
+				p.number.fadeUp 3
+				img.hide(src='images/camera.png')
 
-		p.click-text.hide SAY CHEESE
+			p.click-text.hide SAY CHEESE
 
 
-	div.container.email.show
-		h2 Review Email
-		img.showimage
-		div.pick
-			input(type="email")
-			button(name="email") Email
-		div.progress
-		div.message
-			p There was an error
+		div.email.pt-page.pt-page-4
+			h2 Review Email
+			img.showimage
+			div.email-form
+				p.email-label Enter Your Email
+				input(type="email")
+				button(name="email") Email
+			div.progress
+			div.message
+				
+
+		div.share.pt-page.pt-page-5
+			h2 Can we share your photo? 
+			div.share-container
+				img.showimage
+				div.email-form
+					p We would like to post this photo on social networks for both Micsoft NYY and Space Apps including Instagram, Twitter and Facebook. 
+					p We'll be using the hashtags #buildthefuture. 
+			div.buttons
+				button.share-button.yes-button(name="email") YES PLEASE
+				button.share-button.no-button(name="email") NO THANKS
+
+		div.thanks-yes.pt-page.pt-page-6
+			h2 Awesome! We can't wait to share your photo!
+			p Would you like to take another photo ? 
+			div.buttons
+				button.share-button.yes-button(name="email") YES PLEASE
+				button.share-button.no-button(name="email") NO THANKS
+			
+
+		div.thanks-no.pt-page.pt-page-7
+			h2 No Problem! Maybe Next time.
+			p Would you like to take another photo ? 
+			div.buttons
+				button.share-button.yes-button(name="email") YES PLEASE
+				button.share-button.no-button(name="email") NO THANKS
+
+		div.privacy.pt-page.pt-page-8
+			h2 Privacy Policy
+			p All that stuff goes here 
+			div.buttons
+				button.share-button.yes-button(name="email") DONE
+				
+
+		
+
+
+
 
 
 
