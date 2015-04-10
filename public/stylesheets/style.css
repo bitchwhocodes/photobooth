@@ -58,7 +58,7 @@ a {
 
     .countdown img{
         width:50%;
-        margin-left:80px;
+        margin-left:70px;
         margin-top:70px;
     }
 
@@ -260,7 +260,9 @@ input:focus{
     display:block;
 }
 
-
+.top-title{
+    margin-top:-2px;
+}
 .share-container{
     width:800px;
     margin:0 auto;
@@ -301,7 +303,7 @@ h2{
 
 .activate button{
     width:90%;
-    max-width:400px;
+    max-width:500px;
     min-height:200px;
     font-family:'moon';
     font-weight:bolder;
@@ -313,6 +315,20 @@ h2{
     margin:0 auto;
     text-align:center;
     display:block;
+}
+
+.share a{
+    color:#e81f63;
+    font-size:18px;
+    text-decoration: none;
+   
+   
+}
+
+
+
+.share a:hover,.share a:focus{
+    color:#06bcd3;
 }
 
 .activate button:hover{

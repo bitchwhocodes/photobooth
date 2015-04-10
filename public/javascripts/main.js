@@ -157,8 +157,6 @@ var SMSView  = Backbone.View.extend({
 	handleSMS:function(obj)
 	{
 
-		//console.log("handle email button");
-		// get the value from the input
 		var cell = this.inputField.val();
 		var image = this.img.attr('src');
 		var data={};
@@ -175,10 +173,6 @@ var SMSView  = Backbone.View.extend({
 		  success: _.bind(this.onSMSSubmitted,this),
 		  
 		});
-
-
-
-
 	},
 
 	onSMSSubmitted:function(){
@@ -200,7 +194,8 @@ var ShareView = Backbone.View.extend({
 	el:".pt-page-5",
 	events: {
 		'click .yes-button':'handleYesShare',
-		'click .no-button':'handleNoShare'
+		'click .no-button':'handleNoShare',
+		'click a':'handlePrivacyPolicy'
 			
 	},
 
@@ -208,6 +203,17 @@ var ShareView = Backbone.View.extend({
 		// MARIA YOU MIGHT HAVE TO FIX THESE 
 		this.inputField = $('.email').find('input');
 		this.img = $('.showimage');
+	},
+
+	handlePrivacyPolicy:function(obj){
+		obj.stopPropagation()
+		this.model.set({
+			'currentpage':'.pt-page-5',
+			'nextpage':'.pt-page-8',
+			'nexttransition':'pt-page-moveFromRight',
+			'currtransition':'pt-page-moveToLeft'
+		})
+
 	},
 
 	handleNoShare:function(obj)
@@ -223,13 +229,11 @@ var ShareView = Backbone.View.extend({
 	handleYesShare:function(obj)
 	{
 
-		//console.log("handle email button");
-		// get the value from the input
-		var email = this.inputField.val();
+		console.log("Share View:sharing");
 		var img = this.img.attr('src');
 		var data={};
 		data.img = img;
-		data.email = email;
+		data.email = 'mary.'
 
 		$.ajax({
 		  url: '/email',
@@ -245,12 +249,36 @@ var ShareView = Backbone.View.extend({
 		//console.log(data);
 		this.model.set({
 			'currentpage': '.pt-page-5',
-			'nextpage':'.pt-page-6',
+			'nextpage':'.pt-page-5',
 			'nexttransition':'pt-page-moveFromTop',
 			'currtransition':'pt-page-moveToBottom'
 		});
 
 	}
+})
+
+var PrivacyView = Backbone.View.extend({
+		el:".pt-page-8",
+	events: {
+		'click button':'handleDone'		
+	},
+
+	initialize:function(obj){
+	
+	},
+
+	handleDone:function(obj)
+	{
+		//console.log("handle no share")
+		this.model.set({
+			'currentpage':'.pt-page-8',
+			'nextpage':'.pt-page-5',
+			'nexttransition':'pt-page-moveFromLeft',
+			'currtransition':'pt-page-moveToRight'
+		})
+	},
+	
+	
 })
 
 var NoShareView = Backbone.View.extend({
@@ -305,7 +333,6 @@ var YeshareView = Backbone.View.extend({
 			'currtransition':'pt-page-moveToBottom'
 		})
 	},
-	
 	
 })
 
@@ -386,7 +413,9 @@ var CountDownView = Backbone.View.extend({
 		//console.log("Countdown View : do aniamtion - start it");
 		this.hasStarted = true;
 		this.counter = 3;
-
+		var sound = new Howl({
+		 		 urls: ['/audio/beep.mp3']
+		}).play();
 		$(this.counterItem).addClass('animated zoomIn');
 		$(this.counterItem).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',_.bind(this.onAnimationComplete, this));
 		
@@ -412,23 +441,39 @@ var CountDownView = Backbone.View.extend({
 		
 		clearInterval(this.mySetID);
 		//console.log("CountdownView : onRestart : counter var"+this.counter);
+		var isLast = false;
 		if(this.counter > -1){
 			$('.countdown').addClass('animated zoomIn');
 			$(this.number).text(this.counter.toString());
 		}else if(this.counter==-1){
 			
 			$('.countdown img').removeClass("hide").addClass('show');
-			$('.countdown p').addClass('hide');
+			$('.countdown p').addClass('hide').removeClass('animated zoomIn show');
 			$('.countdown').addClass('animated zoomIn');
 		} else if(this.counter==-2)
 		{
+			
 			//console.log("CountdownView: onRestart : last Phase of -2");
 			$(this.counterItem).off('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
 			$('.click-text').removeClass('hide').addClass('show animated zoomIn');
-			$('.click-text').removeClass('hide').addClass('show animated zoomIn');$('.click-text').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',_.bind(this.sendMessage, this));
+			$('.click-text').removeClass('hide').addClass('show animated zoomIn');
+			isLast = true;
+			$('.click-text').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',_.bind(this.sendMessage, this));
 			//$('.countdown').addClass('animated fadeOut');
 		}
 
+		if(isLast){
+			var sound = new Howl({
+		 		 urls: ['/audio/rocket.mp3']
+		}).play();
+		}else{
+				var sound = new Howl({
+		 		 urls: ['/audio/beep.mp3']
+		}).play();
+
+
+		}
+	
 	},
 
 	sendMessage:function(){
@@ -626,6 +671,7 @@ var noshare = new NoShareView({model:mod});
 var yesshare = new YeshareView({model:mod});
 var reviewview = new ReviewView({model:mod});
 var smsview = new SMSView({model:mod})
+var privacyview = new PrivacyView({model:mod})
 
 
 var sendview = new SendView({model:mod});

@@ -9,8 +9,8 @@ block content
 			
 		div.activate.pt-page.pt-page-2.pt-page-current
 			div.container-fluid
-				h2 Hello. Take your photo?
-				button.take-photo(name="photo") Let's do it!
+				h2 Hello! Would you like to take your photo?
+				button.take-photo(name="photo") Let's do this!
 
 		div.countdown-container.pt-page.pt-page-3
 			div.container-fluid
@@ -43,13 +43,18 @@ block content
 					div.col-md-3.col-md-offset-3
 						img.showimage
 					div.col-md-3
+						h3.top-title We would love to share
 						p We would like to post this photo on social networks for both Micsoft NYY and Space Apps including Instagram, Twitter and Facebook. 
 						p We'll be using the hashtags #buildthefuture. 
+						h3 Privacy Policy
+						p No personal information is being stored as per the #[a(href="#") Microsoft Privacy Policy]
+
+
 				div.row.topmargin
 					div.col-md-3.col-md-offset-3
-						button.share-button.yes-button(name="email") YES PLEASE
+						button.share-button.yes-button(name="email") GO FOR IT!
 					div.col-md-3
-						button.share-button.no-button(name="email") NO THANKS
+						button.share-button.no-button(name="email") NO WAY!
 
 		div.thanks-yes.pt-page.pt-page-6
 			div.container-fluid
@@ -78,10 +83,11 @@ block content
 			div.container-fluid
 				div.row
 					h2 Privacy Policy
-					p.subheadline All that stuff goes here 
+					iframe(src="http://www.microsoft.com/privacystatement/en-us/core/default.aspx" width="100%" height="500px")
+					
 				div.row.topmargin
 					div.col-md-4.col-md-offset-4
-						button.share-button.yes-button(name="email") DONE
+						button.share-button(name="email") GO BACK
 
 
 
