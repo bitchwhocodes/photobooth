@@ -12,6 +12,7 @@ router.get('/', function(req, res, next) {
 	var image = req.query.image;
 	console.log("image"+image);
 	
+	var msgHTML = "Hi There! Here is your photo from the photobooth at Nasa Space Apps in the Microsoft NY office. <a href='"+image+"'>Click here</a> to get it. Thank you!";
 
 	var msg = "Hi There! Here is your photo from the photobooth at Nasa Space Apps in the Microsoft NY office. Click here to get it :"+image+ ". Thank you!";
 	console.log("message "+msg);
@@ -19,7 +20,8 @@ router.get('/', function(req, res, next) {
 	    to: toAddress,
 	    from: 'donotreply@spaceissoawesome.com',
 	    subject: 'Your Photo',
-	    text: msg
+	    text: msg,
+	    html:msgHTML
 });
 
 	sendgrid.send(email, function(err, json){
