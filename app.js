@@ -9,6 +9,9 @@ var routes = require('./routes/index');
 var getallphotos = require('./routes/getallphotos');
 var takephoto = require('./routes/takephoto');
 
+var sms = require('./routes/sms');
+
+
 
 var azure = require('azure');
 var emailroute = require('./routes/email');
@@ -34,6 +37,7 @@ app.use('/', routes);
 app.use('/email',emailroute);
 app.use('/getallphotos',getallphotos);
 app.use('/takephoto',takephoto);
+app.use('/sms',sms);
 
 //app.use('/photos',getphotos);
 //app.use('/savephoto',savephotos.savephoto);

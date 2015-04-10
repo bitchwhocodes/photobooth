@@ -18,7 +18,7 @@ var AppRouter = Backbone.Router.extend({
 
 var EmailView  = Backbone.View.extend({
 
-	el:".email",
+	el:".pt-page-9",
 	events: {
 		'click button':'handleEmailButton'
 			
@@ -27,19 +27,22 @@ var EmailView  = Backbone.View.extend({
 	initialize:function(obj){
 		// MARIA YOU MIGHT HAVE TO FIX THESE 
 		this.inputField = $('.email').find('input');
-		this.img = $('.showimage');
+		this.img = $(this.el).find('.showimage');
+		console.log("Email Initialize : img"+this.img)
 	},
 
 	handleEmailButton:function(obj)
 	{
 
-		console.log("handle email button");
+		//console.log("handle email button");
 		// get the value from the input
 		var email = this.inputField.val();
-		var img = this.img.attr('src');
+		var image= this.img.attr('src');
 		var data={};
-		data.img = img;
+		data.image = image;
 		data.email = email;
+
+		console.log("EmailView: Submit data",data);
 
 		$.ajax({
 		  url: '/email',
@@ -52,9 +55,10 @@ var EmailView  = Backbone.View.extend({
 	},
 
 	onEmailSubmitted:function(data){
-		console.log(data);
+		//console.log(data);
+		this.inputField.val('');
 		this.model.set({
-			'currentpage': '.pt-page-4',
+			'currentpage': '.pt-page-9',
 			'nextpage':'.pt-page-5',
 			'nexttransition':'pt-page-moveFromBottom',
 			'currtransition':'pt-page-moveToTop'
@@ -64,6 +68,132 @@ var EmailView  = Backbone.View.extend({
 
 	}
 })
+
+var ReviewView  = Backbone.View.extend({
+
+	el:".pt-page-4",
+	events: {
+		'click .review-yes':'handleYesKeep',
+		'click .review-no':'handleNoTrash'
+			
+	},
+
+	initialize:function(obj){
+		// MARIA YOU MIGHT HAVE TO FIX THESE 
+		this.inputField = $('.email').find('input');
+		this.img = $('.showimage');
+	},
+
+	handleYesKeep:function(){
+		this.model.set({
+			'currentpage': '.pt-page-4',
+			'nextpage':'.pt-page-11',
+			'nexttransition':'pt-page-moveFromBottom',
+			'currtransition':'pt-page-moveToTop'
+		});
+
+	},
+	handleNoTrash:function(){
+
+			this.model.set({
+			'currentpage': '.pt-page-4',
+			'nextpage':'.pt-page-2',
+			'nexttransition':'pt-page-moveFromLeft',
+			'currtransition':'pt-page-moveToRight'
+		});
+	}
+})
+
+
+var SendView  = Backbone.View.extend({
+
+	el:".pt-page-11",
+	events: {
+		'click .email-button':'handleEmail',
+		'click .txt-button':'handleSMS'
+			
+	},
+
+	initialize:function(obj){
+		// MARIA YOU MIGHT HAVE TO FIX THESE 
+		this.inputField = $('.email').find('input');
+		this.img = $('.showimage');
+	},
+
+	handleEmail:function(){
+		this.model.set({
+			'currentpage': '.pt-page-11',
+			'nextpage':'.pt-page-9',
+			'nexttransition':'pt-page-moveFromRight',
+			'currtransition':'pt-page-moveToLeft'
+		});
+
+	},
+	handleSMS:function(){
+
+			this.model.set({
+			'currentpage': '.pt-page-11',
+			'nextpage':'.pt-page-10',
+			'nexttransition':'pt-page-moveFromRight',
+			'currtransition':'pt-page-moveToLeft'
+		});
+	}
+})
+
+var SMSView  = Backbone.View.extend({
+
+	el:".pt-page-10",
+	events: {
+		'click button':'handleSMS',
+			
+	},
+
+	initialize:function(obj){
+		// MARIA YOU MIGHT HAVE TO FIX THESE 
+		this.inputField = $(this.el).find('input');
+		this.img = $('.showimage');
+	},
+
+	handleSMS:function(obj)
+	{
+
+		//console.log("handle email button");
+		// get the value from the input
+		var cell = this.inputField.val();
+		var image = this.img.attr('src');
+		var data={};
+
+		this.inputField.val('');
+		
+		data.cell = cell;
+		//console.log(data.cell);
+		data.image=image;
+
+		$.ajax({
+		  url: '/sms',
+		  data: data,
+		  success: _.bind(this.onSMSSubmitted,this),
+		  
+		});
+
+
+
+
+	},
+
+	onSMSSubmitted:function(){
+
+			//console.log("onSMSSubmitted")
+			this.model.set({
+			'currentpage': '.pt-page-10',
+			'nextpage':'.pt-page-5',
+			'nexttransition':'pt-page-moveFromRight',
+			'currtransition':'pt-page-moveToLeft'
+		});
+	}
+})
+
+
 
 var ShareView = Backbone.View.extend({
 
@@ -82,7 +212,7 @@ var ShareView = Backbone.View.extend({
 
 	handleNoShare:function(obj)
 	{
-		console.log("handle no share")
+		//console.log("handle no share")
 		this.model.set({
 			'currentpage':'.pt-page-5',
 			'nextpage':'.pt-page-7',
@@ -93,7 +223,7 @@ var ShareView = Backbone.View.extend({
 	handleYesShare:function(obj)
 	{
 
-		console.log("handle email button");
+		//console.log("handle email button");
 		// get the value from the input
 		var email = this.inputField.val();
 		var img = this.img.attr('src');
@@ -112,7 +242,7 @@ var ShareView = Backbone.View.extend({
 	},
 
 	onEmailSubmitted:function(data){
-		console.log(data);
+		//console.log(data);
 		this.model.set({
 			'currentpage': '.pt-page-5',
 			'nextpage':'.pt-page-6',
@@ -139,7 +269,7 @@ var NoShareView = Backbone.View.extend({
 
 	handleYesPhoto:function(obj)
 	{
-		console.log("handle no share")
+		//console.log("handle no share")
 		this.model.set({
 			'currentpage':'.pt-page-7',
 			'nextpage':'.pt-page-2',
@@ -167,7 +297,7 @@ var YeshareView = Backbone.View.extend({
 
 	handleYesPhoto:function(obj)
 	{
-		console.log("handle no share")
+		//console.log("handle no share")
 		this.model.set({
 			'currentpage':'.pt-page-6',
 			'nextpage':'.pt-page-2',
@@ -212,6 +342,7 @@ var CountDownView = Backbone.View.extend({
 	initialize:function(obj)
 	{
 		this.counter = 3;
+		this.hasStarted = false;
 		this.classesToAdd =['pink','lime','orange','black','blue'];
 		this.counterItem = $(this.el).find('.countdown');
 		this.number = $(this.el).find('.number');
@@ -228,12 +359,17 @@ var CountDownView = Backbone.View.extend({
 
 		var current = this.model.get('nextpage');
 		var ready = this.model.get('ready')
-		console.log(current+"STACEY YES HANDLE READY")
-		console.log(ready)
-		if(current == this.myPage && ready =='1'){
-			this.doAnimation();
-		}
 
+		console.log(current+"STACEY YES HANDLE READY");
+		//console.log(ready);
+		if(current == this.myPage && ready =='1' && !this.hasStarted){
+
+			this.doAnimation();
+		}else{
+			this.counter = 3;
+			$(this.number).text(this.counter.toString());
+			$('.click-text').addClass('hide');
+		}
 	},
 
 	prepare:function(){
@@ -243,13 +379,14 @@ var CountDownView = Backbone.View.extend({
 		
 	},
 
-	startAnimation:function(){
 
-	},
 
 	doAnimation:function(){
 
-		console.log("do aniamtionj")
+		//console.log("Countdown View : do aniamtion - start it");
+		this.hasStarted = true;
+		this.counter = 3;
+
 		$(this.counterItem).addClass('animated zoomIn');
 		$(this.counterItem).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',_.bind(this.onAnimationComplete, this));
 		
@@ -257,23 +394,24 @@ var CountDownView = Backbone.View.extend({
 	},
 	onAnimationComplete:function(){
 
+			//console.log("CounterView: onAnimationComplete");
             var newClass = this.classesToAdd[this.counter+1];
-	    	$(this.el).removeClass('pink blue black orange ').addClass(newClass)
-	    
+	    	$(this.el).removeClass('pink blue black orange ').addClass(newClass);
+	    	console.log("CounterView : onAnimationComplete : counter var: "+this.counter);
 	    	if(this.counter> -2){
-	    	
-				$(this.counterItem).removeClass('animated zoomIn');
+	    		$(this.counterItem).removeClass('animated zoomIn');
 				this.counter--;
 				this.mySetID = setInterval(_.bind(this.onRestart, this), 100);
 			}else{
 			
-			this.counter = 3;
+			
 		}
 	},
 
 	onRestart:function(){
 		
 		clearInterval(this.mySetID);
+		//console.log("CountdownView : onRestart : counter var"+this.counter);
 		if(this.counter > -1){
 			$('.countdown').addClass('animated zoomIn');
 			$(this.number).text(this.counter.toString());
@@ -284,8 +422,10 @@ var CountDownView = Backbone.View.extend({
 			$('.countdown').addClass('animated zoomIn');
 		} else if(this.counter==-2)
 		{
+			//console.log("CountdownView: onRestart : last Phase of -2");
+			$(this.counterItem).off('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
 			$('.click-text').removeClass('hide').addClass('show animated zoomIn');
-			$('.click-text').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',_.bind(this.sendMessage, this));
+			$('.click-text').removeClass('hide').addClass('show animated zoomIn');$('.click-text').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',_.bind(this.sendMessage, this));
 			//$('.countdown').addClass('animated fadeOut');
 		}
 
@@ -293,7 +433,11 @@ var CountDownView = Backbone.View.extend({
 
 	sendMessage:function(){
 
-		console.log("stuff is going");
+		//console.log("stuff is going");
+		this.hasStarted = false;
+		$('.click-text').removeClass('animated zoomIn');
+		console.log("CountdownView : sendMessage");
+		$('.click-text').off('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
 		
 		$.ajax({
             url: '/takephoto',
@@ -303,12 +447,12 @@ var CountDownView = Backbone.View.extend({
             contentType: 'application/json',
 
             complete: function() {
-                console.log('process complete');
+                console.log('CountdownView: complete : process complete');
 
             },
             success: _.bind(this.handleSuccess,this),
             error: function() {
-                console.log('process error');
+                console.log('CountdownView: error: process error');
             }
         });
 	
@@ -329,7 +473,7 @@ var CountDownView = Backbone.View.extend({
 
 	render:function()
 	{
-		console.log("render");		
+		//console.log("render");		
 	},
 
 	
@@ -356,9 +500,9 @@ var PageView = Backbone.View.extend({
 		this.pages = $( '.pt-page'),
 		$(this.pages).each( function() {
 			var $page = $( this );
-			console.log($page);
+			//console.log($page);
 			$page.data( 'originalClassList', $page.attr( 'class' ) );
-			console.log($page.data('originalClassList' ))
+			//console.log($page.data('originalClassList' ))
 		} );
 
 		this.animEndEventNames = {
@@ -390,7 +534,7 @@ var PageView = Backbone.View.extend({
 		this.nextPage = this.model.get('nextpage');
 		$(this.nextPage).addClass('pt-page-current');
 
-		console.log(this.nextPage);
+		//console.log(this.nextPage);
 
 			var outClass = this.model.get('currtransition');
 			var inClass = this.model.get('nexttransition');
@@ -404,8 +548,8 @@ var PageView = Backbone.View.extend({
 		$(this.currentPage).off( this.animEndEventName );
 			this.endCurrPage = true;
 			if( this.endNextPage ) {
-				console.log("end current has finished");
-				console.log(this.endNextPage)
+				//console.log("end current has finished");
+				//console.log(this.endNextPage)
 				this.onEndAnimation( $(this.currentPage), $(this.nextPage ));
 			}
 
@@ -415,10 +559,10 @@ var PageView = Backbone.View.extend({
 		$(this.nextPage).off( this.animEndEventName );
 			
 			this.endNextPage = true;
-			console.log("ON END NEXT");
-			console.log("current too? "+this.endCurrPage)
+			//console.log("ON END NEXT");
+			//console.log("current too? "+this.endCurrPage)
 			if( this.endCurrPage ) {
-				console.log("end next page done");
+				//console.log("end next page done");
 				this.onEndAnimation( $(this.currentPage), $(this.nextPage ));
 			}
 	},
@@ -436,7 +580,7 @@ var PageView = Backbone.View.extend({
 	},
 
 	resetPage:function( outpage, inpage ) {
-		console.log("reset page")
+		//console.log("reset page")
 
 		$(outpage).attr( 'class', $(outpage).data( 'originalClassList' ) );
 		$(outpage).removeClass('pt-page-current');
@@ -480,9 +624,11 @@ var takephoto = new TakePhotoView({model:mod});
 var shareview = new ShareView({model:mod});
 var noshare = new NoShareView({model:mod});
 var yesshare = new YeshareView({model:mod});
+var reviewview = new ReviewView({model:mod});
+var smsview = new SMSView({model:mod})
 
 
-
+var sendview = new SendView({model:mod});
 
 function StarField(canvas_id, width, height, num_stars) {
   var width = width ? width : 600,

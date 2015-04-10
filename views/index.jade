@@ -1,71 +1,129 @@
 extends layout
 block content
 
+
 	div.stars-holder
 		canvas#stars(width='1600' height='600')
 	div#pt-main.pt-perspective
 
-
-		div.idle.pt-page.pt-page-1
-			h2 Idle screen
 			
 		div.activate.pt-page.pt-page-2.pt-page-current
-			h2 Hello. Take your photo?
-			button.take-photo(name="photo") Let's do it!
+			div.container-fluid
+				h2 Hello. Take your photo?
+				button.take-photo(name="photo") Let's do it!
 
-			
-		
 		div.countdown-container.pt-page.pt-page-3
-			h2 Photo Countdown
-			div.countdown
-				p.number.fadeUp 3
-				img.hide(src='images/camera.png')
+			div.container-fluid
+				h2 Photo Countdown
+				div.countdown
+					p.number.fadeUp 3
+					img.hide(src='images/camera.png')
 
-			p.click-text.hide SAY CHEESE
+				p.click-text.hide BLAST OFF! 
 
 
 		div.email.pt-page.pt-page-4
-			h2 Review Email
-			img.showimage
-			div.email-form
-				p.email-label Enter Your Email
-				input(type="email")
-				button(name="email") Email
-			div.progress
-			div.message
+			div.container-fluid
+				div.row
+					h2 Review Your Photo
+					div.col-md-6.col-md-offset-3
+						p.subheadline What do you think?
+						img.showimage
+				div.email-form.row.topmargin
+					div.col-md-3.col-md-offset-3
+						button.review-yes(name="email") Keep it 
+					div.col-md-3
+						button.review-no(name="email") Trash it 
 				
 
 		div.share.pt-page.pt-page-5
-			h2 Can we share your photo? 
-			div.share-container
-				img.showimage
-				div.email-form
-					p We would like to post this photo on social networks for both Micsoft NYY and Space Apps including Instagram, Twitter and Facebook. 
-					p We'll be using the hashtags #buildthefuture. 
-			div.buttons
-				button.share-button.yes-button(name="email") YES PLEASE
-				button.share-button.no-button(name="email") NO THANKS
+			div.container-fluid
+				div.row
+					h2 Can we share your photo? 
+					div.col-md-3.col-md-offset-3
+						img.showimage
+					div.col-md-3
+						p We would like to post this photo on social networks for both Micsoft NYY and Space Apps including Instagram, Twitter and Facebook. 
+						p We'll be using the hashtags #buildthefuture. 
+				div.row.topmargin
+					div.col-md-3.col-md-offset-3
+						button.share-button.yes-button(name="email") YES PLEASE
+					div.col-md-3
+						button.share-button.no-button(name="email") NO THANKS
 
 		div.thanks-yes.pt-page.pt-page-6
-			h2 Awesome! We can't wait to share your photo!
-			p Would you like to take another photo ? 
-			div.buttons
-				button.share-button.yes-button(name="email") YES PLEASE
-				button.share-button.no-button(name="email") NO THANKS
+			div.container-fluid
+				div.row
+					h2 Awesome! We can't wait to share your photo!
+					p.subheadline Would you like to take another photo ?
+					div.row.topmargin
+						div.col-md-3.col-md-offset-3
+							button.share-button.yes-button(name="email") YES 
+						div.col-md-3
+							button.share-button.no-button(name="email") NO THANKS
 			
 
 		div.thanks-no.pt-page.pt-page-7
-			h2 No Problem! Maybe Next time.
-			p Would you like to take another photo ? 
-			div.buttons
-				button.share-button.yes-button(name="email") YES PLEASE
-				button.share-button.no-button(name="email") NO THANKS
+			div.container-fluid
+				div.row
+					h2 No Problem! Maybe Next time.
+					p.subheadline Would you like to take another photo? 
+				div.row.topmargin
+						div.col-md-3.col-md-offset-3
+							button.share-button.yes-button(name="email") YES PLEASE
+						div.col-md-3
+							button.share-button.no-button(name="email") NO THANKS
 
 		div.privacy.pt-page.pt-page-8
-			h2 Privacy Policy
-			p All that stuff goes here 
-			div.buttons
-				button.share-button.yes-button(name="email") DONE
+			div.container-fluid
+				div.row
+					h2 Privacy Policy
+					p.subheadline All that stuff goes here 
+				div.row.topmargin
+					div.col-md-4.col-md-offset-4
+						button.share-button.yes-button(name="email") DONE
+
+
+
+
+
+
+		div.email.share.pt-page.pt-page-9
+			div.container-fluid
+				div.row
+					h2 Email Your Photo
+					div.col-md-3.col-md-offset-3
+						img.showimage
+					div.col-md-4
+						p.email-label Enter Your Email
+						input(type="email" placeholder="enter your email")
+						button.share-button(name="email") SEND THE PHOTO
+			
+
+		div.email.share.pt-page.pt-page-10
+			div.container-fluid
+				div.row
+					h2 Txt Your Photo
+					div.col-md-3.col-md-offset-3
+						img.showimage
+
+					div.col-md-4
+						p.email-label Enter Your Cell phone number
+						input(type="email" placeholder="19179091212")
+						button.share-button(name="email") SEND THE PHOTO
+
+		div.share.choice.pt-page.pt-page-11
+			div.container-fluid
+				div.row
+					h2 How do you want to send your photo?
+				div.row.topmargin
+					div.col-md-6.col-md-offset-3
+						button.share-button.email-button(name="email") EMAIL IT TO ME
+				div.row.buttonmargin
+					div.col-md-6.col-md-offset-3
+						button.share-button.txt-button(name="email") TXT ME A LINK
+
+		
 				
 
 		
