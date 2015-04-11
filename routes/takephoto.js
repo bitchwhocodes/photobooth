@@ -3,15 +3,19 @@ var dotenv =require('dotenv').load();
 var express = require('express');
 var router = express.Router();
 var azure = require("azure");
-
+var uuid = require('node-uuid');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
  
+
+ 	var uniqueId = uuid.v4();
+ 	var msg = 'take photo '+uniqueId;
   	var serviceBusService = azure.createServiceBusService(process.env.AZURE_SERVICE_ENDPOINT);
   	var message = {
     body: 'take photo',
     customProperties: {
-        messagetype: 0
+        messagetype: 0,
+        unique:uniqueId
 	    }
 	}
 
@@ -47,7 +51,15 @@ router.get('/', function(req, res, next) {
 	    	
        		
 	    }else{
-	    	if (err) send(req,res,err,500);
+	    	if (error) {
+	    		var objToJSON ={};
+	    		objToJSON.result = error;
+				objToJSON.error = true;
+	    		res.writeHead(200, {"Content-Type": "application/json"});
+				 res.write(JSON.stringify(objToJSON));
+				 res.end();
+	    		console.log(error);
+	    	}
 	    	//clearInterval(interval);
 	    }
 

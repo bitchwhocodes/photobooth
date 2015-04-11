@@ -1,38 +1,1250 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
 1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'start' ]
+1 verbose cli   'install',
+1 verbose cli   'zerorpc',
+1 verbose cli   '--save' ]
 2 info using npm@2.5.1
 3 info using node@v0.12.1
 4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
-5 verbose run-script [ 'prestart', 'start', 'poststart' ]
-6 info prestart Photobooth@0.0.0
-7 info start Photobooth@0.0.0
-8 verbose unsafe-perm in lifecycle true
-9 info Photobooth@0.0.0 Failed to exec start script
-10 verbose stack Error: Photobooth@0.0.0 start: `node ./bin/www`
-10 verbose stack Exit status 1
-10 verbose stack     at EventEmitter.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\lifecycle.js:213:16)
-10 verbose stack     at EventEmitter.emit (events.js:110:17)
-10 verbose stack     at ChildProcess.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\spawn.js:14:12)
-10 verbose stack     at ChildProcess.emit (events.js:110:17)
-10 verbose stack     at maybeClose (child_process.js:1008:16)
-10 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1080:5)
-11 verbose pkgid Photobooth@0.0.0
-12 verbose cwd C:\Users\stmulcah\Documents\Github\Photobooth
-13 error Windows_NT 6.3.9600
-14 error argv "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
-15 error node v0.12.1
-16 error npm  v2.5.1
-17 error code ELIFECYCLE
-18 error Photobooth@0.0.0 start: `node ./bin/www`
-18 error Exit status 1
-19 error Failed at the Photobooth@0.0.0 start script 'node ./bin/www'.
-19 error This is most likely a problem with the Photobooth package,
-19 error not with npm itself.
-19 error Tell the author that this fails on your system:
-19 error     node ./bin/www
-19 error You can get their info via:
-19 error     npm owner ls Photobooth
-19 error There is likely additional logging output above.
-20 verbose exit [ 1, true ]
+5 silly cache add args [ 'zerorpc', null ]
+6 verbose cache add spec zerorpc
+7 silly cache add parsed spec { raw: 'zerorpc',
+7 silly cache add   scope: null,
+7 silly cache add   name: 'zerorpc',
+7 silly cache add   rawSpec: '',
+7 silly cache add   spec: '*',
+7 silly cache add   type: 'range' }
+8 verbose addNamed zerorpc@*
+9 silly addNamed semver.valid null
+10 silly addNamed semver.validRange *
+11 silly addNameRange { name: 'zerorpc', range: '*', hasData: false }
+12 silly mapToRegistry name zerorpc
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/zerorpc
+16 verbose addNameRange registry:https://registry.npmjs.org/zerorpc not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/zerorpc
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 4:46:47 PM
+20 verbose request id 7a295c0de676980c
+21 verbose etag "3I7IQOFDZ2OZU2TVKZWM51KEB"
+22 http request GET https://registry.npmjs.org/zerorpc
+23 http 304 https://registry.npmjs.org/zerorpc
+24 silly get cb [ 304,
+24 silly get   { date: 'Fri, 10 Apr 2015 20:46:47 GMT',
+24 silly get     server: 'Apache',
+24 silly get     via: '1.1 varnish',
+24 silly get     'last-modified': 'Fri, 10 Apr 2015 20:46:47 GMT',
+24 silly get     'cache-control': 'max-age=60',
+24 silly get     etag: '"3I7IQOFDZ2OZU2TVKZWM51KEB"',
+24 silly get     age: '0',
+24 silly get     'x-served-by': 'cache-lax1433-LAX',
+24 silly get     'x-cache': 'MISS',
+24 silly get     'x-cache-hits': '0',
+24 silly get     'x-timer': 'S1428698807.500797,VS0,VE76',
+24 silly get     vary: 'Accept',
+24 silly get     'content-length': '0',
+24 silly get     'keep-alive': 'timeout=10, max=50',
+24 silly get     connection: 'Keep-Alive' } ]
+25 verbose etag https://registry.npmjs.org/zerorpc from cache
+26 verbose get saving zerorpc to C:\Users\stmulcah\AppData\Roaming\npm-cache\registry.npmjs.org\zerorpc\.cache.json
+27 silly addNameRange number 2 { name: 'zerorpc', range: '*', hasData: true }
+28 silly addNameRange versions [ 'zerorpc',
+28 silly addNameRange   [ '0.1.0',
+28 silly addNameRange     '0.2.0',
+28 silly addNameRange     '0.3.0',
+28 silly addNameRange     '0.4.0',
+28 silly addNameRange     '0.5.0',
+28 silly addNameRange     '0.6.0',
+28 silly addNameRange     '0.6.1',
+28 silly addNameRange     '0.7.0',
+28 silly addNameRange     '0.7.1',
+28 silly addNameRange     '0.7.2',
+28 silly addNameRange     '0.7.3',
+28 silly addNameRange     '0.7.4',
+28 silly addNameRange     '0.8.0',
+28 silly addNameRange     '0.8.1',
+28 silly addNameRange     '0.8.2',
+28 silly addNameRange     '0.8.3',
+28 silly addNameRange     '0.8.4',
+28 silly addNameRange     '0.8.5',
+28 silly addNameRange     '0.8.6',
+28 silly addNameRange     '0.8.7',
+28 silly addNameRange     '0.8.8',
+28 silly addNameRange     '0.9.0',
+28 silly addNameRange     '0.9.1',
+28 silly addNameRange     '0.9.2',
+28 silly addNameRange     '0.9.3' ] ]
+29 verbose addNamed zerorpc@0.9.3
+30 silly addNamed semver.valid 0.9.3
+31 silly addNamed semver.validRange 0.9.3
+32 silly cache afterAdd zerorpc@0.9.3
+33 verbose afterAdd C:\Users\stmulcah\AppData\Roaming\npm-cache\zerorpc\0.9.3\package\package.json not in flight; writing
+34 verbose afterAdd C:\Users\stmulcah\AppData\Roaming\npm-cache\zerorpc\0.9.3\package\package.json written
+35 silly install resolved [ { name: 'zerorpc',
+35 silly install resolved     version: '0.9.3',
+35 silly install resolved     main: './index.js',
+35 silly install resolved     author: { name: 'dotCloud', email: 'opensource@dotcloud.com' },
+35 silly install resolved     description: 'A port of ZeroRPC to node.js',
+35 silly install resolved     contributors: [ [Object], [Object] ],
+35 silly install resolved     repository: { type: 'git', url: 'https://github.com/dotcloud/zerorpc-node' },
+35 silly install resolved     keywords: [ 'zerorpc', 'rpc', 'distributed', 'communication' ],
+35 silly install resolved     dependencies:
+35 silly install resolved      { underscore: '1.3.3',
+35 silly install resolved        msgpack: '0.1.8',
+35 silly install resolved        'node-uuid': '1.3.3',
+35 silly install resolved        zmq: '2.x' },
+35 silly install resolved     devDependencies: { nodeunit: '0.7.4' },
+35 silly install resolved     license: 'MIT',
+35 silly install resolved     readme: 'zerorpc-node\n============\n\nZeroRPC is a communication layer for distributed systems. zerorpc-node is a port of the original [ZeroRPC](https://github.com/dotcloud/zerorpc-python) for node.js. We have full client and server support for version 3 of the protocol, and clients/servers written in the Python version can communicate transparently with those written in node.js. This project is alpha.\n\nTo install the package:\n\n    npm install zerorpc\n\nIf you get the error `Package libzmq was not found`, take a look at [the fix for zeromq.node](https://github.com/JustinTulloss/zeromq.node/issues/55). If you get the error `Unable to load shared library <<path to zeromq.node>>/binding.node`, [make sure you run ldconfig](https://github.com/JustinTulloss/zeromq.node/issues/85). If that still doesn\'t work, check out [this ticket](https://github.com/JustinTulloss/zeromq.node/issues/92).\n\nServers\n-------\n\nTo create a new server:\n\n    var zerorpc = require("zerorpc");\n    var server = new zerorpc.Server(context);\n\nThe constructor takes in a context object with the functions to expose over RPC. Only functions that do not have a leading underscore will be exposed. Each exposed method must take in a callback as the last argument. This callback is called as `callback(error, response, more)` when there is a new update, where error is an error object or string, response is the new update, and more is a boolean specifying whether new updates will be available later. `error`, `response`, and `more` default to falsy values, so e.g. simply calling `callback()` closes an open stream, since `more` is false by default.\n\nEvents:\n\n* `error` - When an error occurs.\n\nMethods:\n\n* `bind(endpoint)` - Binds the server to the specified ZeroMQ endpoint.\n* `connect(endpoint)` - Connects the server to the specified ZeroMQ endpoint.\n* `close()` - Closes the ZeroMQ socket.\n\nFull example:\n\n    var zerorpc = require("zerorpc");\n\n    var server = new zerorpc.Server({\n        addMan: function(sentence, reply) {\n            reply(null, sentence + ", man!");\n        },\n\n        add42: function(n, reply) {\n            reply(null, n + 42);\n        },\n\n        iter: function(from, to, step, reply) {\n            for(i=from; i<to; i+=step) {\n                reply(null, i, true);\n            }\n\n            reply();\n        }\n    });\n\n    server.bind("tcp://0.0.0.0:4242");\n\n    server.on("error", function(error) {\n        console.error("RPC server error:", error);\n    });\n\nClients\n-------\n\nTo create a new client:\n\n    var zerorpc = require("zerorpc");\n    var client = new zerorpc.Client(options);\n\nThe constructor optionally takes in an options object. Allowable options:\n\n* `timeout` (number) - Sets the number of seconds to wait for a response before considering the call timed out. Defaults to 30.\n\nEvents:\n\n* `error` - When an error occurs.\n\nMethods:\n\n* `bind(endpoint)` - Binds the client to the specified ZeroMQ endpoint.\n* `connect(endpoint)` - Connects the client to the specified ZeroMQ endpoint.\n* `close()` - Closes the ZeroMQ socket.\n* `invoke(method, arguments..., callback)` - Invokes a remote method.\n  * `method` is the method name.\n  * `callback` is a method to call when there is an update. This callback is called as `callback(error, response, more)`, where error is an error object, response is the new update, and more is a boolean specifying whether new updates will be available later (i.e. whether the response is streaming).\n\nFull example:\n\n    var zerorpc = require("zerorpc");\n\n    var client = new zerorpc.Client();\n    client.connect("tcp://127.0.0.1:4242");\n\n    client.on("error", function(error) {\n        console.error("RPC client error:", error);\n    });\n\n    client.invoke("iter", 10, 20, 2, function(error, res, more) {\n        if(error) {\n            console.error(error);\n        } else {\n            console.log("UPDATE:", res);\n        }\n\n        if(!more) {\n            console.log("Done.");\n        }\n    });',
+35 silly install resolved     _id: 'zerorpc@0.9.3',
+35 silly install resolved     dist:
+35 silly install resolved      { shasum: '77e0bcfb2aba576ed659b2983230febecf301741',
+35 silly install resolved        tarball: 'http://registry.npmjs.org/zerorpc/-/zerorpc-0.9.3.tgz' },
+35 silly install resolved     maintainers: [ [Object], [Object] ],
+35 silly install resolved     directories: {},
+35 silly install resolved     _shasum: '77e0bcfb2aba576ed659b2983230febecf301741',
+35 silly install resolved     _resolved: 'https://registry.npmjs.org/zerorpc/-/zerorpc-0.9.3.tgz',
+35 silly install resolved     _from: 'zerorpc@*',
+35 silly install resolved     bugs: { url: 'https://github.com/dotcloud/zerorpc-node/issues' },
+35 silly install resolved     homepage: 'https://github.com/dotcloud/zerorpc-node' } ]
+36 info install zerorpc@0.9.3 into C:\Users\stmulcah\Documents\Github\Photobooth
+37 info installOne zerorpc@0.9.3
+38 verbose installOne of zerorpc to C:\Users\stmulcah\Documents\Github\Photobooth not in flight; installing
+39 verbose lock using C:\Users\stmulcah\AppData\Roaming\npm-cache\_locks\zerorpc-1b93acf5fb3ccdf5.lock for C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc
+40 silly install write writing zerorpc 0.9.3 to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc
+41 silly cache addNamed cb zerorpc@0.9.3
+42 verbose unbuild node_modules\zerorpc
+43 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc
+44 verbose tar unpack C:\Users\stmulcah\AppData\Roaming\npm-cache\zerorpc\0.9.3\package.tgz
+45 verbose tar unpacking to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc
+46 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc
+47 silly gunzTarPerm modes [ '777', '666' ]
+48 silly gunzTarPerm extractEntry package.json
+49 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+50 silly gunzTarPerm extractEntry .npmignore
+51 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+52 silly gunzTarPerm extractEntry README.md
+53 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+54 silly gunzTarPerm extractEntry LICENSE
+55 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+56 silly gunzTarPerm extractEntry index.js
+57 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+58 silly gunzTarPerm extractEntry lib/server.js
+59 silly gunzTarPerm modified mode [ 'lib/server.js', 420, 438 ]
+60 silly gunzTarPerm extractEntry lib/buffer.js
+61 silly gunzTarPerm modified mode [ 'lib/buffer.js', 420, 438 ]
+62 silly gunzTarPerm extractEntry lib/channel.js
+63 silly gunzTarPerm modified mode [ 'lib/channel.js', 420, 438 ]
+64 silly gunzTarPerm extractEntry lib/client.js
+65 silly gunzTarPerm modified mode [ 'lib/client.js', 420, 438 ]
+66 silly gunzTarPerm extractEntry lib/util.js
+67 silly gunzTarPerm modified mode [ 'lib/util.js', 420, 438 ]
+68 silly gunzTarPerm extractEntry lib/socket.js
+69 silly gunzTarPerm modified mode [ 'lib/socket.js', 420, 438 ]
+70 silly gunzTarPerm extractEntry lib/middleware.js
+71 silly gunzTarPerm modified mode [ 'lib/middleware.js', 420, 438 ]
+72 silly gunzTarPerm extractEntry lib/events.js
+73 silly gunzTarPerm modified mode [ 'lib/events.js', 420, 438 ]
+74 silly gunzTarPerm extractEntry test/timeouts.js
+75 silly gunzTarPerm modified mode [ 'test/timeouts.js', 420, 438 ]
+76 silly gunzTarPerm extractEntry test/repro-10.js
+77 silly gunzTarPerm modified mode [ 'test/repro-10.js', 420, 438 ]
+78 silly gunzTarPerm extractEntry test/invocation.js
+79 silly gunzTarPerm modified mode [ 'test/invocation.js', 420, 438 ]
+80 silly gunzTarPerm extractEntry test/errors.js
+81 silly gunzTarPerm modified mode [ 'test/errors.js', 420, 438 ]
+82 silly gunzTarPerm extractEntry test/buffers.js
+83 silly gunzTarPerm modified mode [ 'test/buffers.js', 420, 438 ]
+84 silly gunzTarPerm extractEntry test/streams.js
+85 silly gunzTarPerm modified mode [ 'test/streams.js', 420, 438 ]
+86 silly gunzTarPerm extractEntry test/heartbeats.js
+87 silly gunzTarPerm modified mode [ 'test/heartbeats.js', 420, 438 ]
+88 info preinstall zerorpc@0.9.3
+89 silly prepareForInstallMany adding underscore@1.3.3 from zerorpc dependencies
+90 silly prepareForInstallMany adding msgpack@0.1.8 from zerorpc dependencies
+91 silly prepareForInstallMany adding node-uuid@1.3.3 from zerorpc dependencies
+92 silly prepareForInstallMany adding zmq@2.x from zerorpc dependencies
+93 silly cache add args [ 'underscore@1.3.3', null ]
+94 verbose cache add spec underscore@1.3.3
+95 silly cache add args [ 'msgpack@0.1.8', null ]
+96 verbose cache add spec msgpack@0.1.8
+97 silly cache add parsed spec { raw: 'underscore@1.3.3',
+97 silly cache add   scope: null,
+97 silly cache add   name: 'underscore',
+97 silly cache add   rawSpec: '1.3.3',
+97 silly cache add   spec: '1.3.3',
+97 silly cache add   type: 'version' }
+98 verbose addNamed underscore@1.3.3
+99 silly addNamed semver.valid 1.3.3
+100 silly addNamed semver.validRange 1.3.3
+101 silly mapToRegistry name underscore
+102 silly mapToRegistry using default registry
+103 silly mapToRegistry registry https://registry.npmjs.org/
+104 silly mapToRegistry uri https://registry.npmjs.org/underscore
+105 verbose addNameVersion registry:https://registry.npmjs.org/underscore not in flight; fetching
+106 silly cache add parsed spec { raw: 'msgpack@0.1.8',
+106 silly cache add   scope: null,
+106 silly cache add   name: 'msgpack',
+106 silly cache add   rawSpec: '0.1.8',
+106 silly cache add   spec: '0.1.8',
+106 silly cache add   type: 'version' }
+107 verbose addNamed msgpack@0.1.8
+108 silly addNamed semver.valid 0.1.8
+109 silly addNamed semver.validRange 0.1.8
+110 silly mapToRegistry name msgpack
+111 silly mapToRegistry using default registry
+112 silly mapToRegistry registry https://registry.npmjs.org/
+113 silly mapToRegistry uri https://registry.npmjs.org/msgpack
+114 verbose addNameVersion registry:https://registry.npmjs.org/msgpack not in flight; fetching
+115 silly cache add args [ 'node-uuid@1.3.3', null ]
+116 verbose cache add spec node-uuid@1.3.3
+117 silly cache add parsed spec { raw: 'node-uuid@1.3.3',
+117 silly cache add   scope: null,
+117 silly cache add   name: 'node-uuid',
+117 silly cache add   rawSpec: '1.3.3',
+117 silly cache add   spec: '1.3.3',
+117 silly cache add   type: 'version' }
+118 verbose addNamed node-uuid@1.3.3
+119 silly addNamed semver.valid 1.3.3
+120 silly addNamed semver.validRange 1.3.3
+121 silly mapToRegistry name node-uuid
+122 silly mapToRegistry using default registry
+123 silly mapToRegistry registry https://registry.npmjs.org/
+124 silly mapToRegistry uri https://registry.npmjs.org/node-uuid
+125 verbose addNameVersion registry:https://registry.npmjs.org/node-uuid not in flight; fetching
+126 silly cache add args [ 'zmq@2.x', null ]
+127 verbose cache add spec zmq@2.x
+128 silly cache add parsed spec { raw: 'zmq@2.x',
+128 silly cache add   scope: null,
+128 silly cache add   name: 'zmq',
+128 silly cache add   rawSpec: '2.x',
+128 silly cache add   spec: '>=2.0.0 <3.0.0',
+128 silly cache add   type: 'range' }
+129 verbose addNamed zmq@>=2.0.0 <3.0.0
+130 silly addNamed semver.valid null
+131 silly addNamed semver.validRange >=2.0.0 <3.0.0
+132 silly addNameRange { name: 'zmq', range: '>=2.0.0 <3.0.0', hasData: false }
+133 silly mapToRegistry name zmq
+134 silly mapToRegistry using default registry
+135 silly mapToRegistry registry https://registry.npmjs.org/
+136 silly mapToRegistry uri https://registry.npmjs.org/zmq
+137 verbose addNameRange registry:https://registry.npmjs.org/zmq not in flight; fetching
+138 verbose request uri https://registry.npmjs.org/underscore
+139 verbose request no auth needed
+140 info attempt registry request try #1 at 4:46:48 PM
+141 verbose etag "BZ7JZ88IAOYT3FOZGHXWY3R52"
+142 http request GET https://registry.npmjs.org/underscore
+143 verbose request uri https://registry.npmjs.org/msgpack
+144 verbose request no auth needed
+145 info attempt registry request try #1 at 4:46:48 PM
+146 verbose etag "60QPCTUDWKH9ZA5CPZJJC9ERE"
+147 http request GET https://registry.npmjs.org/msgpack
+148 verbose request uri https://registry.npmjs.org/node-uuid
+149 verbose request no auth needed
+150 info attempt registry request try #1 at 4:46:48 PM
+151 verbose etag "5N64SV4FUFI0JZUPM765WGOMC"
+152 http request GET https://registry.npmjs.org/node-uuid
+153 verbose request uri https://registry.npmjs.org/zmq
+154 verbose request no auth needed
+155 info attempt registry request try #1 at 4:46:48 PM
+156 verbose etag "14FLT2EUEFQI6UYYC2PTSFZA2"
+157 http request GET https://registry.npmjs.org/zmq
+158 http 304 https://registry.npmjs.org/underscore
+159 silly get cb [ 304,
+159 silly get   { date: 'Fri, 10 Apr 2015 20:46:48 GMT',
+159 silly get     server: 'Apache',
+159 silly get     via: '1.1 varnish',
+159 silly get     'last-modified': 'Fri, 10 Apr 2015 20:46:48 GMT',
+159 silly get     'cache-control': 'max-age=60',
+159 silly get     etag: '"BZ7JZ88IAOYT3FOZGHXWY3R52"',
+159 silly get     age: '2',
+159 silly get     'x-served-by': 'cache-lax1432-LAX',
+159 silly get     'x-cache': 'HIT',
+159 silly get     'x-cache-hits': '1',
+159 silly get     'x-timer': 'S1428698808.544170,VS0,VE0',
+159 silly get     vary: 'Accept',
+159 silly get     'content-length': '0',
+159 silly get     'keep-alive': 'timeout=10, max=50',
+159 silly get     connection: 'Keep-Alive' } ]
+160 verbose etag https://registry.npmjs.org/underscore from cache
+161 verbose get saving underscore to C:\Users\stmulcah\AppData\Roaming\npm-cache\registry.npmjs.org\underscore\.cache.json
+162 http 304 https://registry.npmjs.org/msgpack
+163 silly get cb [ 304,
+163 silly get   { date: 'Fri, 10 Apr 2015 20:46:48 GMT',
+163 silly get     server: 'Apache',
+163 silly get     via: '1.1 varnish',
+163 silly get     'last-modified': 'Fri, 10 Apr 2015 20:46:48 GMT',
+163 silly get     'cache-control': 'max-age=60',
+163 silly get     etag: '"60QPCTUDWKH9ZA5CPZJJC9ERE"',
+163 silly get     age: '15',
+163 silly get     'x-served-by': 'cache-lax1422-LAX',
+163 silly get     'x-cache': 'HIT',
+163 silly get     'x-cache-hits': '1',
+163 silly get     'x-timer': 'S1428698808.552613,VS0,VE0',
+163 silly get     vary: 'Accept',
+163 silly get     'content-length': '0',
+163 silly get     'keep-alive': 'timeout=10, max=50',
+163 silly get     connection: 'Keep-Alive' } ]
+164 verbose etag https://registry.npmjs.org/msgpack from cache
+165 verbose get saving msgpack to C:\Users\stmulcah\AppData\Roaming\npm-cache\registry.npmjs.org\msgpack\.cache.json
+166 http 304 https://registry.npmjs.org/node-uuid
+167 silly get cb [ 304,
+167 silly get   { date: 'Fri, 10 Apr 2015 20:46:48 GMT',
+167 silly get     server: 'Apache',
+167 silly get     via: '1.1 varnish',
+167 silly get     'last-modified': 'Fri, 10 Apr 2015 20:46:45 GMT',
+167 silly get     'cache-control': 'max-age=60',
+167 silly get     etag: '"5N64SV4FUFI0JZUPM765WGOMC"',
+167 silly get     age: '17',
+167 silly get     'x-served-by': 'cache-lax1435-LAX',
+167 silly get     'x-cache': 'HIT',
+167 silly get     'x-cache-hits': '2',
+167 silly get     'x-timer': 'S1428698808.566988,VS0,VE0',
+167 silly get     vary: 'Accept',
+167 silly get     'content-length': '0',
+167 silly get     'keep-alive': 'timeout=10, max=50',
+167 silly get     connection: 'Keep-Alive' } ]
+168 verbose etag https://registry.npmjs.org/node-uuid from cache
+169 verbose get saving node-uuid to C:\Users\stmulcah\AppData\Roaming\npm-cache\registry.npmjs.org\node-uuid\.cache.json
+170 silly cache afterAdd msgpack@0.1.8
+171 verbose afterAdd C:\Users\stmulcah\AppData\Roaming\npm-cache\msgpack\0.1.8\package\package.json not in flight; writing
+172 silly cache afterAdd underscore@1.3.3
+173 verbose afterAdd C:\Users\stmulcah\AppData\Roaming\npm-cache\underscore\1.3.3\package\package.json not in flight; writing
+174 silly cache afterAdd node-uuid@1.3.3
+175 verbose afterAdd C:\Users\stmulcah\AppData\Roaming\npm-cache\node-uuid\1.3.3\package\package.json not in flight; writing
+176 verbose afterAdd C:\Users\stmulcah\AppData\Roaming\npm-cache\msgpack\0.1.8\package\package.json written
+177 verbose afterAdd C:\Users\stmulcah\AppData\Roaming\npm-cache\underscore\1.3.3\package\package.json written
+178 verbose afterAdd C:\Users\stmulcah\AppData\Roaming\npm-cache\node-uuid\1.3.3\package\package.json written
+179 http 304 https://registry.npmjs.org/zmq
+180 silly get cb [ 304,
+180 silly get   { date: 'Fri, 10 Apr 2015 20:46:48 GMT',
+180 silly get     server: 'Apache',
+180 silly get     via: '1.1 varnish',
+180 silly get     'last-modified': 'Fri, 10 Apr 2015 20:46:48 GMT',
+180 silly get     'cache-control': 'max-age=60',
+180 silly get     etag: '"14FLT2EUEFQI6UYYC2PTSFZA2"',
+180 silly get     age: '0',
+180 silly get     'x-served-by': 'cache-lax1427-LAX',
+180 silly get     'x-cache': 'MISS',
+180 silly get     'x-cache-hits': '0',
+180 silly get     'x-timer': 'S1428698808.557779,VS0,VE85',
+180 silly get     vary: 'Accept',
+180 silly get     'content-length': '0',
+180 silly get     'keep-alive': 'timeout=10, max=50',
+180 silly get     connection: 'Keep-Alive' } ]
+181 verbose etag https://registry.npmjs.org/zmq from cache
+182 verbose get saving zmq to C:\Users\stmulcah\AppData\Roaming\npm-cache\registry.npmjs.org\zmq\.cache.json
+183 silly addNameRange number 2 { name: 'zmq', range: '>=2.0.0 <3.0.0', hasData: true }
+184 silly addNameRange versions [ 'zmq',
+184 silly addNameRange   [ '1.0.0',
+184 silly addNameRange     '1.0.1',
+184 silly addNameRange     '1.0.2',
+184 silly addNameRange     '1.0.3',
+184 silly addNameRange     '1.0.4',
+184 silly addNameRange     '2.0.0',
+184 silly addNameRange     '2.0.1',
+184 silly addNameRange     '2.0.2',
+184 silly addNameRange     '2.0.3',
+184 silly addNameRange     '2.1.0',
+184 silly addNameRange     '2.2.0',
+184 silly addNameRange     '2.3.0',
+184 silly addNameRange     '2.4.0',
+184 silly addNameRange     '2.5.0',
+184 silly addNameRange     '2.5.1',
+184 silly addNameRange     '2.6.0',
+184 silly addNameRange     '2.7.0',
+184 silly addNameRange     '2.8.0',
+184 silly addNameRange     '2.9.0',
+184 silly addNameRange     '2.10.0',
+184 silly addNameRange     '2.11.0' ] ]
+185 verbose addNamed zmq@2.11.0
+186 silly addNamed semver.valid 2.11.0
+187 silly addNamed semver.validRange 2.11.0
+188 silly cache afterAdd zmq@2.11.0
+189 verbose afterAdd C:\Users\stmulcah\AppData\Roaming\npm-cache\zmq\2.11.0\package\package.json not in flight; writing
+190 verbose afterAdd C:\Users\stmulcah\AppData\Roaming\npm-cache\zmq\2.11.0\package\package.json written
+191 silly install resolved [ { name: 'msgpack',
+191 silly install resolved     description: 'A space-efficient object serialization library for node.js',
+191 silly install resolved     version: '0.1.8',
+191 silly install resolved     homepage: 'https://github.com/pgriess/node-msgpack',
+191 silly install resolved     author: { name: 'Peter Griess', email: 'pg@std.in' },
+191 silly install resolved     contributors: [ [Object], [Object] ],
+191 silly install resolved     repository:
+191 silly install resolved      { type: 'git',
+191 silly install resolved        url: 'https://github.com/pgriess/node-msgpack.git' },
+191 silly install resolved     main: './lib/msgpack',
+191 silly install resolved     directories: { lib: 'lib' },
+191 silly install resolved     engines: { node: '>=0.8.x' },
+191 silly install resolved     bin:
+191 silly install resolved      { json2msgpack: './bin/json2msgpack',
+191 silly install resolved        msgpack2json: './bin/msgpack2json' },
+191 silly install resolved     scripts: { install: 'node-gyp rebuild' },
+191 silly install resolved     gypfile: true,
+191 silly install resolved     _id: 'msgpack@0.1.8',
+191 silly install resolved     dist:
+191 silly install resolved      { shasum: 'cd5c0d2277bf1659a871209ddf59f57ad1124d68',
+191 silly install resolved        tarball: 'http://registry.npmjs.org/msgpack/-/msgpack-0.1.8.tgz' },
+191 silly install resolved     _npmVersion: '1.1.59',
+191 silly install resolved     _npmUser: { name: 'godsflaw', email: 'chris@dod.net' },
+191 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+191 silly install resolved     _shasum: 'cd5c0d2277bf1659a871209ddf59f57ad1124d68',
+191 silly install resolved     _resolved: 'https://registry.npmjs.org/msgpack/-/msgpack-0.1.8.tgz',
+191 silly install resolved     _from: 'msgpack@0.1.8',
+191 silly install resolved     bugs: { url: 'https://github.com/pgriess/node-msgpack/issues' },
+191 silly install resolved     readme: 'ERROR: No README data found!' },
+191 silly install resolved   { name: 'underscore',
+191 silly install resolved     description: 'JavaScript\'s functional programming helper library.',
+191 silly install resolved     homepage: 'http://documentcloud.github.com/underscore/',
+191 silly install resolved     keywords: [ 'util', 'functional', 'server', 'client', 'browser' ],
+191 silly install resolved     author: { name: 'Jeremy Ashkenas', email: 'jeremy@documentcloud.org' },
+191 silly install resolved     repository:
+191 silly install resolved      { type: 'git',
+191 silly install resolved        url: 'git://github.com/documentcloud/underscore.git' },
+191 silly install resolved     main: 'underscore.js',
+191 silly install resolved     version: '1.3.3',
+191 silly install resolved     _npmUser: { name: 'jashkenas', email: 'jashkenas@gmail.com' },
+191 silly install resolved     _id: 'underscore@1.3.3',
+191 silly install resolved     dependencies: {},
+191 silly install resolved     devDependencies: {},
+191 silly install resolved     optionalDependencies: {},
+191 silly install resolved     engines: { node: '*' },
+191 silly install resolved     _engineSupported: true,
+191 silly install resolved     _npmVersion: '1.1.1',
+191 silly install resolved     _nodeVersion: 'v0.6.11',
+191 silly install resolved     _defaultsLoaded: true,
+191 silly install resolved     dist:
+191 silly install resolved      { shasum: '47ac53683daf832bfa952e1774417da47817ae42',
+191 silly install resolved        tarball: 'http://registry.npmjs.org/underscore/-/underscore-1.3.3.tgz' },
+191 silly install resolved     maintainers: [ [Object], [Object] ],
+191 silly install resolved     directories: {},
+191 silly install resolved     _shasum: '47ac53683daf832bfa952e1774417da47817ae42',
+191 silly install resolved     _resolved: 'https://registry.npmjs.org/underscore/-/underscore-1.3.3.tgz',
+191 silly install resolved     _from: 'underscore@1.3.3',
+191 silly install resolved     bugs: { url: 'https://github.com/documentcloud/underscore/issues' },
+191 silly install resolved     readme: 'ERROR: No README data found!' },
+191 silly install resolved   { name: 'node-uuid',
+191 silly install resolved     description: 'Rigorous implementation of RFC4122 (v1 and v4) UUIDs.',
+191 silly install resolved     url: 'http://github.com/broofa/node-uuid',
+191 silly install resolved     keywords: [ 'uuid', 'guid', 'rfc4122' ],
+191 silly install resolved     author: { name: 'Robert Kieffer', email: 'robert@broofa.com' },
+191 silly install resolved     contributors: [ [Object] ],
+191 silly install resolved     lib: '.',
+191 silly install resolved     main: './uuid.js',
+191 silly install resolved     repository: { type: 'git', url: 'git://github.com/broofa/node-uuid.git' },
+191 silly install resolved     version: '1.3.3',
+191 silly install resolved     _npmUser: { name: 'broofa', email: 'robert@broofa.com' },
+191 silly install resolved     _id: 'node-uuid@1.3.3',
+191 silly install resolved     dependencies: {},
+191 silly install resolved     devDependencies: {},
+191 silly install resolved     engines: { node: '*' },
+191 silly install resolved     _engineSupported: true,
+191 silly install resolved     _npmVersion: '1.0.106',
+191 silly install resolved     _nodeVersion: 'v0.4.6',
+191 silly install resolved     _defaultsLoaded: true,
+191 silly install resolved     dist:
+191 silly install resolved      { shasum: 'd3db4d7b56810d9e4032342766282af07391729b',
+191 silly install resolved        tarball: 'http://registry.npmjs.org/node-uuid/-/node-uuid-1.3.3.tgz' },
+191 silly install resolved     maintainers: [ [Object] ],
+191 silly install resolved     directories: {},
+191 silly install resolved     _shasum: 'd3db4d7b56810d9e4032342766282af07391729b',
+191 silly install resolved     _resolved: 'https://registry.npmjs.org/node-uuid/-/node-uuid-1.3.3.tgz',
+191 silly install resolved     _from: 'node-uuid@1.3.3',
+191 silly install resolved     bugs: { url: 'https://github.com/broofa/node-uuid/issues' },
+191 silly install resolved     readme: 'ERROR: No README data found!',
+191 silly install resolved     homepage: 'https://github.com/broofa/node-uuid' },
+191 silly install resolved   { name: 'zmq',
+191 silly install resolved     version: '2.11.0',
+191 silly install resolved     description: 'Bindings for node.js and io.js to ZeroMQ',
+191 silly install resolved     main: 'index',
+191 silly install resolved     repository:
+191 silly install resolved      { type: 'git',
+191 silly install resolved        url: 'http://github.com/JustinTulloss/zeromq.node.git' },
+191 silly install resolved     dependencies: { nan: '~1.5.0', bindings: '~1.1.1' },
+191 silly install resolved     devDependencies: { should: '2.1.x', semver: '~4.1.1', mocha: '~1.13.0' },
+191 silly install resolved     engines: { node: '>=0.8' },
+191 silly install resolved     scripts: { test: 'make test', install: 'node-gyp rebuild' },
+191 silly install resolved     keywords:
+191 silly install resolved      [ 'zeromq',
+191 silly install resolved        'zmq',
+191 silly install resolved        '0mq',
+191 silly install resolved        'ømq',
+191 silly install resolved        'libzmq',
+191 silly install resolved        'native',
+191 silly install resolved        'binding',
+191 silly install resolved        'addon' ],
+191 silly install resolved     author:
+191 silly install resolved      { name: 'Justin Tulloss',
+191 silly install resolved        email: 'justin.tulloss@gmail.com',
+191 silly install resolved        url: 'http://justin.harmonize.fm' },
+191 silly install resolved     contributors:
+191 silly install resolved      [ [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object],
+191 silly install resolved        [Object] ],
+191 silly install resolved     gypfile: true,
+191 silly install resolved     gitHead: 'bfd80e374ee85e640e132f39e1e693955d6154ce',
+191 silly install resolved     bugs: { url: 'https://github.com/JustinTulloss/zeromq.node/issues' },
+191 silly install resolved     homepage: 'https://github.com/JustinTulloss/zeromq.node',
+191 silly install resolved     _id: 'zmq@2.11.0',
+191 silly install resolved     _shasum: '4511aee4b57109742eb8c51aa4c170211843e7cd',
+191 silly install resolved     _from: 'zmq@>=2.0.0 <3.0.0',
+191 silly install resolved     _npmVersion: '2.5.1',
+191 silly install resolved     _nodeVersion: '0.12.1',
+191 silly install resolved     _npmUser: { name: 'ronkorving', email: 'ron@ronkorving.nl' },
+191 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+191 silly install resolved     dist:
+191 silly install resolved      { shasum: '4511aee4b57109742eb8c51aa4c170211843e7cd',
+191 silly install resolved        tarball: 'http://registry.npmjs.org/zmq/-/zmq-2.11.0.tgz' },
+191 silly install resolved     directories: {},
+191 silly install resolved     _resolved: 'https://registry.npmjs.org/zmq/-/zmq-2.11.0.tgz',
+191 silly install resolved     readme: 'ERROR: No README data found!' } ]
+192 info install msgpack@0.1.8 into C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc
+193 info install underscore@1.3.3 into C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc
+194 info install node-uuid@1.3.3 into C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc
+195 info install zmq@2.11.0 into C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc
+196 info installOne msgpack@0.1.8
+197 verbose installOne of msgpack to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc not in flight; installing
+198 info installOne underscore@1.3.3
+199 verbose installOne of underscore to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc not in flight; installing
+200 info installOne node-uuid@1.3.3
+201 verbose installOne of node-uuid to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc not in flight; installing
+202 info installOne zmq@2.11.0
+203 verbose installOne of zmq to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc not in flight; installing
+204 verbose lock using C:\Users\stmulcah\AppData\Roaming\npm-cache\_locks\msgpack-c96e2164fb2700f8.lock for C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\msgpack
+205 silly install write writing msgpack 0.1.8 to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\msgpack
+206 silly cache addNamed cb msgpack@0.1.8
+207 verbose unbuild node_modules\zerorpc\node_modules\msgpack
+208 verbose lock using C:\Users\stmulcah\AppData\Roaming\npm-cache\_locks\underscore-97d04d6ba80cba90.lock for C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\underscore
+209 verbose lock using C:\Users\stmulcah\AppData\Roaming\npm-cache\_locks\zmq-8c8b1e7c147deb38.lock for C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq
+210 verbose lock using C:\Users\stmulcah\AppData\Roaming\npm-cache\_locks\node-uuid-40d273496b3baffa.lock for C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\node-uuid
+211 silly install write writing underscore 1.3.3 to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\underscore
+212 silly cache addNamed cb underscore@1.3.3
+213 verbose unbuild node_modules\zerorpc\node_modules\underscore
+214 silly install write writing zmq 2.11.0 to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq
+215 silly cache addNamed cb zmq@2.11.0
+216 verbose unbuild node_modules\zerorpc\node_modules\zmq
+217 silly install write writing node-uuid 1.3.3 to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\node-uuid
+218 silly cache addNamed cb node-uuid@1.3.3
+219 verbose unbuild node_modules\zerorpc\node_modules\node-uuid
+220 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\msgpack
+221 verbose tar unpack C:\Users\stmulcah\AppData\Roaming\npm-cache\msgpack\0.1.8\package.tgz
+222 verbose tar unpacking to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\msgpack
+223 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\msgpack
+224 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\underscore
+225 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq
+226 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\node-uuid
+227 silly gunzTarPerm modes [ '777', '666' ]
+228 verbose tar unpack C:\Users\stmulcah\AppData\Roaming\npm-cache\underscore\1.3.3\package.tgz
+229 verbose tar unpacking to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\underscore
+230 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\underscore
+231 verbose tar unpack C:\Users\stmulcah\AppData\Roaming\npm-cache\zmq\2.11.0\package.tgz
+232 verbose tar unpacking to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq
+233 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq
+234 verbose tar unpack C:\Users\stmulcah\AppData\Roaming\npm-cache\node-uuid\1.3.3\package.tgz
+235 verbose tar unpacking to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\node-uuid
+236 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\node-uuid
+237 silly gunzTarPerm modes [ '777', '666' ]
+238 silly gunzTarPerm modes [ '777', '666' ]
+239 silly gunzTarPerm modes [ '777', '666' ]
+240 silly gunzTarPerm extractEntry package.json
+241 silly gunzTarPerm extractEntry .npmignore
+242 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+243 silly gunzTarPerm extractEntry package.json
+244 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+245 silly gunzTarPerm extractEntry uuid.js
+246 silly gunzTarPerm modified mode [ 'uuid.js', 420, 438 ]
+247 silly gunzTarPerm extractEntry .npmignore
+248 silly gunzTarPerm extractEntry README.md
+249 silly gunzTarPerm extractEntry CNAME
+250 silly gunzTarPerm modified mode [ 'CNAME', 420, 438 ]
+251 silly gunzTarPerm extractEntry favicon.ico
+252 silly gunzTarPerm modified mode [ 'favicon.ico', 493, 511 ]
+253 silly gunzTarPerm extractEntry package.json
+254 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+255 silly gunzTarPerm extractEntry LICENSE.md
+256 silly gunzTarPerm modified mode [ 'LICENSE.md', 420, 438 ]
+257 silly gunzTarPerm extractEntry .npmignore
+258 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+259 silly gunzTarPerm extractEntry README.md
+260 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+261 silly gunzTarPerm extractEntry LICENSE
+262 silly gunzTarPerm extractEntry bench.js
+263 silly gunzTarPerm extractEntry LICENSE
+264 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+265 silly gunzTarPerm extractEntry index.js
+266 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+267 silly gunzTarPerm extractEntry index.html
+268 silly gunzTarPerm modified mode [ 'index.html', 420, 438 ]
+269 silly gunzTarPerm extractEntry index.js
+270 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+271 silly gunzTarPerm extractEntry LICENSE
+272 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+273 silly gunzTarPerm extractEntry package.json
+274 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+275 silly gunzTarPerm extractEntry raw/
+276 silly gunzTarPerm modified mode [ 'raw/', 493, 511 ]
+277 silly gunzTarPerm extractEntry raw/underscore.psd
+278 silly gunzTarPerm modified mode [ 'raw/underscore.psd', 420, 438 ]
+279 silly gunzTarPerm extractEntry README.md
+280 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+281 silly gunzTarPerm extractEntry underscore-min.js
+282 silly gunzTarPerm modified mode [ 'underscore-min.js', 420, 438 ]
+283 silly gunzTarPerm extractEntry underscore.js
+284 silly gunzTarPerm modified mode [ 'underscore.js', 420, 438 ]
+285 silly gunzTarPerm extractEntry binding.gyp
+286 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 438 ]
+287 silly gunzTarPerm extractEntry .travis.yml
+288 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+289 silly gunzTarPerm extractEntry test/test-stream-disjoint.js
+290 silly gunzTarPerm extractEntry test/test-stream.js
+291 silly gunzTarPerm extractEntry .gitignore
+292 silly gunzTarPerm modified mode [ '.gitignore', 420, 438 ]
+293 silly gunzTarPerm extractEntry README.md
+294 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+295 silly gunzTarPerm extractEntry test/test.js
+296 silly gunzTarPerm modified mode [ 'test/test.js', 420, 438 ]
+297 silly gunzTarPerm extractEntry binding.cc
+298 silly gunzTarPerm modified mode [ 'binding.cc', 420, 438 ]
+299 silly gunzTarPerm extractEntry History.md
+300 silly gunzTarPerm modified mode [ 'History.md', 420, 438 ]
+301 silly gunzTarPerm extractEntry test/compare_v1.js
+302 silly gunzTarPerm modified mode [ 'test/compare_v1.js', 420, 438 ]
+303 silly gunzTarPerm extractEntry test/test.html
+304 silly gunzTarPerm modified mode [ 'test/test.html', 420, 438 ]
+305 silly gunzTarPerm extractEntry test/test-unpack-extra.js
+306 silly gunzTarPerm extractEntry test/test.js
+307 silly gunzTarPerm extractEntry examples/dealer_router.js
+308 silly gunzTarPerm modified mode [ 'examples/dealer_router.js', 420, 438 ]
+309 silly gunzTarPerm extractEntry examples/pub_sub.js
+310 silly gunzTarPerm modified mode [ 'examples/pub_sub.js', 420, 438 ]
+311 silly gunzTarPerm extractEntry benchmark/benchmark.js
+312 silly gunzTarPerm modified mode [ 'benchmark/benchmark.js', 420, 438 ]
+313 silly gunzTarPerm extractEntry benchmark/bench.gnu
+314 silly gunzTarPerm modified mode [ 'benchmark/bench.gnu', 420, 438 ]
+315 silly gunzTarPerm extractEntry bin/json2msgpack
+316 silly gunzTarPerm extractEntry bin/msgpack2json
+317 silly gunzTarPerm extractEntry examples/push_pull.js
+318 silly gunzTarPerm modified mode [ 'examples/push_pull.js', 420, 438 ]
+319 silly gunzTarPerm extractEntry examples/rep_req.js
+320 silly gunzTarPerm modified mode [ 'examples/rep_req.js', 420, 438 ]
+321 silly gunzTarPerm extractEntry binding.gyp
+322 silly gunzTarPerm extractEntry deps/msgpack/LICENSE
+323 silly gunzTarPerm extractEntry examples/req_rep.js
+324 silly gunzTarPerm modified mode [ 'examples/req_rep.js', 420, 438 ]
+325 silly gunzTarPerm extractEntry examples/router_dealer.js
+326 silly gunzTarPerm modified mode [ 'examples/router_dealer.js', 420, 438 ]
+327 silly gunzTarPerm extractEntry benchmark/bench.sh
+328 silly gunzTarPerm modified mode [ 'benchmark/bench.sh', 493, 511 ]
+329 silly gunzTarPerm extractEntry benchmark/README.md
+330 silly gunzTarPerm modified mode [ 'benchmark/README.md', 420, 438 ]
+331 silly gunzTarPerm extractEntry deps/msgpack/msgpack.hpp
+332 silly gunzTarPerm extractEntry deps/msgpack/gcc_atomic.cpp
+333 silly gunzTarPerm extractEntry examples/rpc.js
+334 silly gunzTarPerm modified mode [ 'examples/rpc.js', 420, 438 ]
+335 silly gunzTarPerm extractEntry examples/devices/forwarder.js
+336 silly gunzTarPerm modified mode [ 'examples/devices/forwarder.js', 420, 438 ]
+337 silly gunzTarPerm extractEntry examples/devices/queue.js
+338 silly gunzTarPerm modified mode [ 'examples/devices/queue.js', 420, 438 ]
+339 silly gunzTarPerm extractEntry benchmark/benchmark-native.c
+340 silly gunzTarPerm modified mode [ 'benchmark/benchmark-native.c', 420, 438 ]
+341 silly gunzTarPerm extractEntry deps/msgpack/AUTHORS
+342 silly gunzTarPerm extractEntry deps/msgpack/msgpack/unpack.h
+343 silly gunzTarPerm extractEntry deps/msgpack/msgpack/object.h
+344 silly gunzTarPerm extractEntry deps/msgpack/msgpack/pack.h
+345 silly gunzTarPerm extractEntry examples/devices/streamer.js
+346 silly gunzTarPerm modified mode [ 'examples/devices/streamer.js', 420, 438 ]
+347 silly gunzTarPerm extractEntry deps/msgpack/msgpack/pack.hpp
+348 silly gunzTarPerm extractEntry deps/msgpack/msgpack/pack_define.h
+349 silly gunzTarPerm extractEntry examples/workers/producer.js
+350 silly gunzTarPerm modified mode [ 'examples/workers/producer.js', 420, 438 ]
+351 silly gunzTarPerm extractEntry deps/msgpack/msgpack/pack_template.h
+352 silly gunzTarPerm extractEntry deps/msgpack/msgpack/sbuffer.h
+353 silly gunzTarPerm extractEntry deps/msgpack/msgpack/sbuffer.hpp
+354 silly gunzTarPerm extractEntry deps/msgpack/msgpack/sysdep.h
+355 silly gunzTarPerm extractEntry examples/workers/worker.js
+356 silly gunzTarPerm modified mode [ 'examples/workers/worker.js', 420, 438 ]
+357 silly gunzTarPerm extractEntry lib/index.js
+358 silly gunzTarPerm modified mode [ 'lib/index.js', 420, 438 ]
+359 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/nil.hpp
+360 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/bool.hpp
+361 silly gunzTarPerm extractEntry test/context.js
+362 silly gunzTarPerm modified mode [ 'test/context.js', 420, 438 ]
+363 silly gunzTarPerm extractEntry test/socket.monitor.js
+364 silly gunzTarPerm modified mode [ 'test/socket.monitor.js', 420, 438 ]
+365 silly gunzTarPerm extractEntry test/socket.pair.js
+366 silly gunzTarPerm modified mode [ 'test/socket.pair.js', 420, 438 ]
+367 silly gunzTarPerm extractEntry test/socket.pub-sub.js
+368 silly gunzTarPerm modified mode [ 'test/socket.pub-sub.js', 420, 438 ]
+369 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/deque.hpp
+370 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/fixint.hpp
+371 silly gunzTarPerm extractEntry test/socket.push-pull.js
+372 silly gunzTarPerm modified mode [ 'test/socket.push-pull.js', 420, 438 ]
+373 silly gunzTarPerm extractEntry test/socket.messages.js
+374 silly gunzTarPerm modified mode [ 'test/socket.messages.js', 420, 438 ]
+375 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/float.hpp
+376 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/int.hpp
+377 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/list.hpp
+378 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/map.hpp
+379 info preinstall node-uuid@1.3.3
+380 silly install resolved []
+381 verbose about to build C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\node-uuid
+382 info build C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\node-uuid
+383 verbose linkStuff [ false,
+383 verbose linkStuff   false,
+383 verbose linkStuff   false,
+383 verbose linkStuff   'C:\\Users\\stmulcah\\Documents\\Github\\Photobooth\\node_modules\\zerorpc\\node_modules' ]
+384 info linkStuff node-uuid@1.3.3
+385 verbose linkBins node-uuid@1.3.3
+386 verbose linkMans node-uuid@1.3.3
+387 verbose rebuildBundles node-uuid@1.3.3
+388 silly gunzTarPerm extractEntry test/socket.router.js
+389 silly gunzTarPerm modified mode [ 'test/socket.router.js', 420, 438 ]
+390 silly gunzTarPerm extractEntry test/socket.stream.js
+391 silly gunzTarPerm modified mode [ 'test/socket.stream.js', 420, 438 ]
+392 info install node-uuid@1.3.3
+393 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/define.hpp
+394 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/pair.hpp
+395 info postinstall node-uuid@1.3.3
+396 verbose unlock done using C:\Users\stmulcah\AppData\Roaming\npm-cache\_locks\node-uuid-40d273496b3baffa.lock for C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\node-uuid
+397 silly gunzTarPerm extractEntry test/socket.unbind.js
+398 silly gunzTarPerm modified mode [ 'test/socket.unbind.js', 420, 438 ]
+399 silly gunzTarPerm extractEntry test/socket.xpub-xsub.js
+400 silly gunzTarPerm modified mode [ 'test/socket.xpub-xsub.js', 420, 438 ]
+401 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/raw.hpp
+402 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/set.hpp
+403 silly gunzTarPerm extractEntry test/socket.zap.js
+404 silly gunzTarPerm modified mode [ 'test/socket.zap.js', 420, 438 ]
+405 silly gunzTarPerm extractEntry test/socket.js
+406 silly gunzTarPerm modified mode [ 'test/socket.js', 420, 438 ]
+407 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/string.hpp
+408 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/tr1/unordered_map.hpp
+409 silly gunzTarPerm extractEntry test/zap.js
+410 silly gunzTarPerm modified mode [ 'test/zap.js', 420, 438 ]
+411 silly gunzTarPerm extractEntry test/socket.events.js
+412 silly gunzTarPerm modified mode [ 'test/socket.events.js', 420, 438 ]
+413 silly gunzTarPerm extractEntry test/zmq_proxy.js
+414 silly gunzTarPerm modified mode [ 'test/zmq_proxy.js', 420, 438 ]
+415 silly gunzTarPerm extractEntry test/zmq_proxy.xpub-xsub.js
+416 silly gunzTarPerm modified mode [ 'test/zmq_proxy.xpub-xsub.js', 420, 438 ]
+417 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/tr1/unordered_set.hpp
+418 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/tuple.hpp
+419 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type/vector.hpp
+420 silly gunzTarPerm extractEntry test/zmq_proxy.push-pull.js
+421 silly gunzTarPerm modified mode [ 'test/zmq_proxy.push-pull.js', 420, 438 ]
+422 silly gunzTarPerm extractEntry test/gc.js
+423 silly gunzTarPerm modified mode [ 'test/gc.js', 420, 438 ]
+424 silly gunzTarPerm extractEntry deps/msgpack/msgpack/type.hpp
+425 silly gunzTarPerm extractEntry deps/msgpack/msgpack/object.hpp
+426 silly gunzTarPerm extractEntry deps/msgpack/msgpack/unpack.hpp
+427 silly gunzTarPerm extractEntry test/zmq_proxy.router-dealer.js
+428 silly gunzTarPerm modified mode [ 'test/zmq_proxy.router-dealer.js', 420, 438 ]
+429 silly gunzTarPerm extractEntry test/exports.js
+430 silly gunzTarPerm modified mode [ 'test/exports.js', 420, 438 ]
+431 silly gunzTarPerm extractEntry deps/msgpack/msgpack/unpack_define.h
+432 silly gunzTarPerm extractEntry test/zmq_proxy.xrep-xreq.js
+433 silly gunzTarPerm modified mode [ 'test/zmq_proxy.xrep-xreq.js', 420, 438 ]
+434 silly gunzTarPerm extractEntry test/socket.req-rep.js
+435 silly gunzTarPerm modified mode [ 'test/socket.req-rep.js', 420, 438 ]
+436 silly gunzTarPerm extractEntry deps/msgpack/msgpack/unpack_template.h
+437 silly gunzTarPerm extractEntry deps/msgpack/msgpack/version.h
+438 silly gunzTarPerm extractEntry test/mocha.opts
+439 silly gunzTarPerm modified mode [ 'test/mocha.opts', 420, 438 ]
+440 silly gunzTarPerm extractEntry Makefile
+441 silly gunzTarPerm modified mode [ 'Makefile', 420, 438 ]
+442 silly gunzTarPerm extractEntry deps/msgpack/msgpack/vrefbuffer.h
+443 silly gunzTarPerm extractEntry deps/msgpack/msgpack/vrefbuffer.hpp
+444 silly gunzTarPerm extractEntry deps/msgpack/msgpack/zbuffer.h
+445 silly gunzTarPerm extractEntry deps/msgpack/msgpack/zbuffer.hpp
+446 silly gunzTarPerm extractEntry perf/local_lat.js
+447 silly gunzTarPerm modified mode [ 'perf/local_lat.js', 420, 438 ]
+448 silly gunzTarPerm extractEntry perf/local_thr.js
+449 silly gunzTarPerm modified mode [ 'perf/local_thr.js', 420, 438 ]
+450 silly gunzTarPerm extractEntry deps/msgpack/msgpack/zone.h
+451 silly gunzTarPerm extractEntry deps/msgpack/msgpack/zone.hpp
+452 silly gunzTarPerm extractEntry deps/msgpack/msgpack.gyp
+453 silly gunzTarPerm extractEntry deps/msgpack/msgpack.h
+454 silly gunzTarPerm extractEntry deps/msgpack/COPYING
+455 silly gunzTarPerm extractEntry deps/msgpack/object.cpp
+456 silly gunzTarPerm extractEntry deps/msgpack/objectc.c
+457 silly gunzTarPerm extractEntry deps/msgpack/unpack.c
+458 silly gunzTarPerm extractEntry perf/remote_lat.js
+459 silly gunzTarPerm modified mode [ 'perf/remote_lat.js', 420, 438 ]
+460 silly gunzTarPerm extractEntry perf/remote_thr.js
+461 silly gunzTarPerm modified mode [ 'perf/remote_thr.js', 420, 438 ]
+462 info preinstall underscore@1.3.3
+463 silly gunzTarPerm extractEntry deps/msgpack/version.c
+464 silly gunzTarPerm extractEntry deps/msgpack/vrefbuffer.c
+465 silly install resolved []
+466 verbose about to build C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\underscore
+467 info build C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\underscore
+468 verbose linkStuff [ false,
+468 verbose linkStuff   false,
+468 verbose linkStuff   false,
+468 verbose linkStuff   'C:\\Users\\stmulcah\\Documents\\Github\\Photobooth\\node_modules\\zerorpc\\node_modules' ]
+469 info linkStuff underscore@1.3.3
+470 verbose linkBins underscore@1.3.3
+471 verbose linkMans underscore@1.3.3
+472 verbose rebuildBundles underscore@1.3.3
+473 info install underscore@1.3.3
+474 silly gunzTarPerm extractEntry windows/include/zmq.h
+475 silly gunzTarPerm modified mode [ 'windows/include/zmq.h', 420, 438 ]
+476 silly gunzTarPerm extractEntry windows/include/zmq_utils.h
+477 silly gunzTarPerm modified mode [ 'windows/include/zmq_utils.h', 420, 438 ]
+478 info postinstall underscore@1.3.3
+479 verbose unlock done using C:\Users\stmulcah\AppData\Roaming\npm-cache\_locks\underscore-97d04d6ba80cba90.lock for C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\underscore
+480 silly gunzTarPerm extractEntry deps/msgpack/zone.c
+481 silly gunzTarPerm extractEntry src/msgpack.cc
+482 silly gunzTarPerm extractEntry windows/lib/x64/libzmq-v100-mt-3_2_2.dll
+483 silly gunzTarPerm modified mode [ 'windows/lib/x64/libzmq-v100-mt-3_2_2.dll', 420, 438 ]
+484 silly gunzTarPerm extractEntry windows/lib/x64/libzmq-v100-mt-3_2_2.lib
+485 silly gunzTarPerm modified mode [ 'windows/lib/x64/libzmq-v100-mt-3_2_2.lib', 420, 438 ]
+486 silly gunzTarPerm extractEntry lib/msgpack.js
+487 silly gunzTarPerm extractEntry windows/lib/x86/libzmq-v100-mt-3_2_2.dll
+488 silly gunzTarPerm modified mode [ 'windows/lib/x86/libzmq-v100-mt-3_2_2.dll', 420, 438 ]
+489 silly gunzTarPerm extractEntry windows/lib/x86/libzmq-v100-mt-3_2_2.lib
+490 silly gunzTarPerm modified mode [ 'windows/lib/x86/libzmq-v100-mt-3_2_2.lib', 420, 438 ]
+491 info preinstall msgpack@0.1.8
+492 silly install resolved []
+493 verbose about to build C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\msgpack
+494 info build C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\msgpack
+495 verbose linkStuff [ false,
+495 verbose linkStuff   false,
+495 verbose linkStuff   false,
+495 verbose linkStuff   'C:\\Users\\stmulcah\\Documents\\Github\\Photobooth\\node_modules\\zerorpc\\node_modules' ]
+496 info linkStuff msgpack@0.1.8
+497 verbose linkBins msgpack@0.1.8
+498 verbose link bins [ { json2msgpack: './bin/json2msgpack',
+498 verbose link bins     msgpack2json: './bin/msgpack2json' },
+498 verbose link bins   'C:\\Users\\stmulcah\\Documents\\Github\\Photobooth\\node_modules\\zerorpc\\node_modules\\.bin',
+498 verbose link bins   false ]
+499 verbose linkMans msgpack@0.1.8
+500 verbose rebuildBundles msgpack@0.1.8
+501 info install msgpack@0.1.8
+502 verbose unsafe-perm in lifecycle true
+503 info preinstall zmq@2.11.0
+504 silly prepareForInstallMany adding nan@~1.5.0 from zmq dependencies
+505 silly prepareForInstallMany adding bindings@~1.1.1 from zmq dependencies
+506 silly cache add args [ 'nan@~1.5.0', null ]
+507 verbose cache add spec nan@~1.5.0
+508 silly cache add args [ 'bindings@~1.1.1', null ]
+509 verbose cache add spec bindings@~1.1.1
+510 silly cache add parsed spec { raw: 'nan@~1.5.0',
+510 silly cache add   scope: null,
+510 silly cache add   name: 'nan',
+510 silly cache add   rawSpec: '~1.5.0',
+510 silly cache add   spec: '>=1.5.0 <1.6.0',
+510 silly cache add   type: 'range' }
+511 verbose addNamed nan@>=1.5.0 <1.6.0
+512 silly addNamed semver.valid null
+513 silly addNamed semver.validRange >=1.5.0 <1.6.0
+514 silly addNameRange { name: 'nan', range: '>=1.5.0 <1.6.0', hasData: false }
+515 silly mapToRegistry name nan
+516 silly mapToRegistry using default registry
+517 silly mapToRegistry registry https://registry.npmjs.org/
+518 silly mapToRegistry uri https://registry.npmjs.org/nan
+519 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+520 silly cache add parsed spec { raw: 'bindings@~1.1.1',
+520 silly cache add   scope: null,
+520 silly cache add   name: 'bindings',
+520 silly cache add   rawSpec: '~1.1.1',
+520 silly cache add   spec: '>=1.1.1 <1.2.0',
+520 silly cache add   type: 'range' }
+521 verbose addNamed bindings@>=1.1.1 <1.2.0
+522 silly addNamed semver.valid null
+523 silly addNamed semver.validRange >=1.1.1 <1.2.0
+524 silly addNameRange { name: 'bindings', range: '>=1.1.1 <1.2.0', hasData: false }
+525 silly mapToRegistry name bindings
+526 silly mapToRegistry using default registry
+527 silly mapToRegistry registry https://registry.npmjs.org/
+528 silly mapToRegistry uri https://registry.npmjs.org/bindings
+529 verbose addNameRange registry:https://registry.npmjs.org/bindings not in flight; fetching
+530 verbose request uri https://registry.npmjs.org/bindings
+531 verbose request no auth needed
+532 info attempt registry request try #1 at 4:46:49 PM
+533 verbose etag "5997G8NY1OJEMZ1HNHL7VBX5J"
+534 http request GET https://registry.npmjs.org/bindings
+535 verbose request uri https://registry.npmjs.org/nan
+536 verbose request no auth needed
+537 info attempt registry request try #1 at 4:46:49 PM
+538 verbose etag "2RVNOBUBIPFCFHXKKPTSTKGB8"
+539 http request GET https://registry.npmjs.org/nan
+540 http 304 https://registry.npmjs.org/bindings
+541 silly get cb [ 304,
+541 silly get   { date: 'Fri, 10 Apr 2015 20:46:49 GMT',
+541 silly get     server: 'Apache',
+541 silly get     via: '1.1 varnish',
+541 silly get     'last-modified': 'Fri, 10 Apr 2015 20:46:49 GMT',
+541 silly get     'cache-control': 'max-age=60',
+541 silly get     etag: '"5997G8NY1OJEMZ1HNHL7VBX5J"',
+541 silly get     age: '19',
+541 silly get     'x-served-by': 'cache-lax1421-LAX',
+541 silly get     'x-cache': 'HIT',
+541 silly get     'x-cache-hits': '1',
+541 silly get     'x-timer': 'S1428698809.564882,VS0,VE0',
+541 silly get     vary: 'Accept',
+541 silly get     'content-length': '0',
+541 silly get     'keep-alive': 'timeout=10, max=50',
+541 silly get     connection: 'Keep-Alive' } ]
+542 verbose etag https://registry.npmjs.org/bindings from cache
+543 verbose get saving bindings to C:\Users\stmulcah\AppData\Roaming\npm-cache\registry.npmjs.org\bindings\.cache.json
+544 http 304 https://registry.npmjs.org/nan
+545 silly get cb [ 304,
+545 silly get   { date: 'Fri, 10 Apr 2015 20:46:49 GMT',
+545 silly get     server: 'Apache',
+545 silly get     via: '1.1 varnish',
+545 silly get     'last-modified': 'Fri, 10 Apr 2015 20:46:49 GMT',
+545 silly get     'cache-control': 'max-age=60',
+545 silly get     etag: '"2RVNOBUBIPFCFHXKKPTSTKGB8"',
+545 silly get     age: '13',
+545 silly get     'x-served-by': 'cache-lax1433-LAX',
+545 silly get     'x-cache': 'HIT',
+545 silly get     'x-cache-hits': '1',
+545 silly get     'x-timer': 'S1428698809.570631,VS0,VE0',
+545 silly get     vary: 'Accept',
+545 silly get     'content-length': '0',
+545 silly get     'keep-alive': 'timeout=10, max=50',
+545 silly get     connection: 'Keep-Alive' } ]
+546 verbose etag https://registry.npmjs.org/nan from cache
+547 verbose get saving nan to C:\Users\stmulcah\AppData\Roaming\npm-cache\registry.npmjs.org\nan\.cache.json
+548 silly addNameRange number 2 { name: 'bindings', range: '>=1.1.1 <1.2.0', hasData: true }
+549 silly addNameRange versions [ 'bindings',
+549 silly addNameRange   [ '0.0.1',
+549 silly addNameRange     '0.1.0',
+549 silly addNameRange     '0.1.1',
+549 silly addNameRange     '0.2.0',
+549 silly addNameRange     '0.2.1',
+549 silly addNameRange     '0.2.2',
+549 silly addNameRange     '0.2.3',
+549 silly addNameRange     '0.2.4',
+549 silly addNameRange     '0.3.0',
+549 silly addNameRange     '0.4.0',
+549 silly addNameRange     '1.0.0',
+549 silly addNameRange     '1.1.0',
+549 silly addNameRange     '1.1.1',
+549 silly addNameRange     '1.2.0',
+549 silly addNameRange     '1.2.1' ] ]
+550 verbose addNamed bindings@1.1.1
+551 silly addNamed semver.valid 1.1.1
+552 silly addNamed semver.validRange 1.1.1
+553 silly cache afterAdd bindings@1.1.1
+554 verbose afterAdd C:\Users\stmulcah\AppData\Roaming\npm-cache\bindings\1.1.1\package\package.json not in flight; writing
+555 verbose afterAdd C:\Users\stmulcah\AppData\Roaming\npm-cache\bindings\1.1.1\package\package.json written
+556 silly addNameRange number 2 { name: 'nan', range: '>=1.5.0 <1.6.0', hasData: true }
+557 silly addNameRange versions [ 'nan',
+557 silly addNameRange   [ '0.3.0-wip',
+557 silly addNameRange     '0.3.0-wip2',
+557 silly addNameRange     '0.3.0',
+557 silly addNameRange     '0.3.1',
+557 silly addNameRange     '0.3.2',
+557 silly addNameRange     '0.4.0',
+557 silly addNameRange     '0.4.1',
+557 silly addNameRange     '0.4.2',
+557 silly addNameRange     '0.4.3',
+557 silly addNameRange     '0.4.4',
+557 silly addNameRange     '0.5.0',
+557 silly addNameRange     '0.5.1',
+557 silly addNameRange     '0.5.2',
+557 silly addNameRange     '0.6.0',
+557 silly addNameRange     '0.7.0',
+557 silly addNameRange     '0.7.1',
+557 silly addNameRange     '0.8.0',
+557 silly addNameRange     '1.0.0',
+557 silly addNameRange     '1.1.0',
+557 silly addNameRange     '1.1.1',
+557 silly addNameRange     '1.1.2',
+557 silly addNameRange     '1.2.0',
+557 silly addNameRange     '1.3.0',
+557 silly addNameRange     '1.4.0',
+557 silly addNameRange     '1.4.1',
+557 silly addNameRange     '1.5.0',
+557 silly addNameRange     '1.4.2',
+557 silly addNameRange     '1.4.3',
+557 silly addNameRange     '1.5.1',
+557 silly addNameRange     '1.5.2',
+557 silly addNameRange     '1.6.0',
+557 silly addNameRange     '1.5.3',
+557 silly addNameRange     '1.6.1',
+557 silly addNameRange     '1.6.2',
+557 silly addNameRange     '1.7.0' ] ]
+558 verbose addNamed nan@1.5.3
+559 silly addNamed semver.valid 1.5.3
+560 silly addNamed semver.validRange 1.5.3
+561 silly cache afterAdd nan@1.5.3
+562 verbose afterAdd C:\Users\stmulcah\AppData\Roaming\npm-cache\nan\1.5.3\package\package.json not in flight; writing
+563 verbose afterAdd C:\Users\stmulcah\AppData\Roaming\npm-cache\nan\1.5.3\package\package.json written
+564 silly install resolved [ { name: 'bindings',
+564 silly install resolved     description: 'Helper module for loading your native module\'s .node file',
+564 silly install resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+564 silly install resolved     version: '1.1.1',
+564 silly install resolved     author:
+564 silly install resolved      { name: 'Nathan Rajlich',
+564 silly install resolved        email: 'nathan@tootallnate.net',
+564 silly install resolved        url: 'http://tootallnate.net' },
+564 silly install resolved     repository:
+564 silly install resolved      { type: 'git',
+564 silly install resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+564 silly install resolved     main: './bindings.js',
+564 silly install resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
+564 silly install resolved     _id: 'bindings@1.1.1',
+564 silly install resolved     dist:
+564 silly install resolved      { shasum: '951f7ae010302ffc50b265b124032017ed2bf6f3',
+564 silly install resolved        tarball: 'http://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz' },
+564 silly install resolved     _from: 'bindings@>=1.1.1 <1.2.0',
+564 silly install resolved     _npmVersion: '1.3.2',
+564 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
+564 silly install resolved     maintainers: [ [Object], [Object] ],
+564 silly install resolved     directories: {},
+564 silly install resolved     _shasum: '951f7ae010302ffc50b265b124032017ed2bf6f3',
+564 silly install resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz',
+564 silly install resolved     readme: 'ERROR: No README data found!',
+564 silly install resolved     homepage: 'https://github.com/TooTallNate/node-bindings' },
+564 silly install resolved   { name: 'nan',
+564 silly install resolved     version: '1.5.3',
+564 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8->0.12 compatibility',
+564 silly install resolved     main: 'include_dirs.js',
+564 silly install resolved     repository: { type: 'git', url: 'git://github.com/rvagg/nan.git' },
+564 silly install resolved     scripts:
+564 silly install resolved      { test: 'tap --gc test/js/*-test.js',
+564 silly install resolved        'rebuild-tests': 'node-gyp rebuild --directory test' },
+564 silly install resolved     contributors:
+564 silly install resolved      [ [Object],
+564 silly install resolved        [Object],
+564 silly install resolved        [Object],
+564 silly install resolved        [Object],
+564 silly install resolved        [Object],
+564 silly install resolved        [Object],
+564 silly install resolved        [Object] ],
+564 silly install resolved     devDependencies:
+564 silly install resolved      { bindings: '~1.2.1',
+564 silly install resolved        'node-gyp': '~1.0.2',
+564 silly install resolved        tap: '~0.5.0',
+564 silly install resolved        xtend: '~4.0.0' },
+564 silly install resolved     license: 'MIT',
+564 silly install resolved     gitHead: '28ea7e1b769f790c69deaf141b47e4d41e176e8b',
+564 silly install resolved     bugs: { url: 'https://github.com/rvagg/nan/issues' },
+564 silly install resolved     homepage: 'https://github.com/rvagg/nan',
+564 silly install resolved     _id: 'nan@1.5.3',
+564 silly install resolved     _shasum: '4cd0ecc133b7b0700a492a646add427ae8a318eb',
+564 silly install resolved     _from: 'nan@>=1.5.0 <1.6.0',
+564 silly install resolved     _npmVersion: '2.1.18',
+564 silly install resolved     _nodeVersion: '1.0.3',
+564 silly install resolved     _npmUser: { name: 'rvagg', email: 'rod@vagg.org' },
+564 silly install resolved     maintainers: [ [Object], [Object] ],
+564 silly install resolved     dist:
+564 silly install resolved      { shasum: '4cd0ecc133b7b0700a492a646add427ae8a318eb',
+564 silly install resolved        tarball: 'http://registry.npmjs.org/nan/-/nan-1.5.3.tgz' },
+564 silly install resolved     directories: {},
+564 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-1.5.3.tgz',
+564 silly install resolved     readme: 'ERROR: No README data found!' } ]
+565 info install bindings@1.1.1 into C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq
+566 info install nan@1.5.3 into C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq
+567 info installOne bindings@1.1.1
+568 verbose installOne of bindings to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq not in flight; installing
+569 info installOne nan@1.5.3
+570 verbose installOne of nan to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq not in flight; installing
+571 verbose lock using C:\Users\stmulcah\AppData\Roaming\npm-cache\_locks\bindings-a6467536aebc4319.lock for C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\bindings
+572 silly install write writing bindings 1.1.1 to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\bindings
+573 silly cache addNamed cb bindings@1.1.1
+574 verbose unbuild node_modules\zerorpc\node_modules\zmq\node_modules\bindings
+575 verbose lock using C:\Users\stmulcah\AppData\Roaming\npm-cache\_locks\nan-93067edc1586f8aa.lock for C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\nan
+576 silly install write writing nan 1.5.3 to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\nan
+577 silly cache addNamed cb nan@1.5.3
+578 verbose unbuild node_modules\zerorpc\node_modules\zmq\node_modules\nan
+579 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\bindings
+580 verbose tar unpack C:\Users\stmulcah\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz
+581 verbose tar unpacking to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\bindings
+582 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\bindings
+583 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\nan
+584 silly gunzTarPerm modes [ '777', '666' ]
+585 verbose tar unpack C:\Users\stmulcah\AppData\Roaming\npm-cache\nan\1.5.3\package.tgz
+586 verbose tar unpacking to C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\nan
+587 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\nan
+588 silly gunzTarPerm modes [ '777', '666' ]
+589 silly gunzTarPerm extractEntry package.json
+590 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+591 silly gunzTarPerm extractEntry package.json
+592 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+593 silly gunzTarPerm extractEntry README.md
+594 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+595 silly gunzTarPerm extractEntry bindings.js
+596 silly gunzTarPerm modified mode [ 'bindings.js', 420, 438 ]
+597 silly gunzTarPerm extractEntry README.md
+598 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+599 silly gunzTarPerm extractEntry include_dirs.js
+600 silly gunzTarPerm modified mode [ 'include_dirs.js', 420, 438 ]
+601 silly gunzTarPerm extractEntry LICENSE.md
+602 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 438 ]
+603 silly gunzTarPerm extractEntry .dntrc
+604 silly gunzTarPerm modified mode [ '.dntrc', 436, 438 ]
+605 silly gunzTarPerm extractEntry appveyor.yml
+606 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 438 ]
+607 silly gunzTarPerm extractEntry nan.h
+608 silly gunzTarPerm modified mode [ 'nan.h', 436, 438 ]
+609 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+610 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 438 ]
+611 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+612 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 438 ]
+613 silly gunzTarPerm extractEntry nan_new.h
+614 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 438 ]
+615 silly gunzTarPerm extractEntry CHANGELOG.md
+616 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 438 ]
+617 info preinstall bindings@1.1.1
+618 silly install resolved []
+619 verbose about to build C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\bindings
+620 info build C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\bindings
+621 verbose linkStuff [ false,
+621 verbose linkStuff   false,
+621 verbose linkStuff   false,
+621 verbose linkStuff   'C:\\Users\\stmulcah\\Documents\\Github\\Photobooth\\node_modules\\zerorpc\\node_modules\\zmq\\node_modules' ]
+622 info linkStuff bindings@1.1.1
+623 verbose linkBins bindings@1.1.1
+624 verbose linkMans bindings@1.1.1
+625 verbose rebuildBundles bindings@1.1.1
+626 info install bindings@1.1.1
+627 info postinstall bindings@1.1.1
+628 verbose unlock done using C:\Users\stmulcah\AppData\Roaming\npm-cache\_locks\bindings-a6467536aebc4319.lock for C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\bindings
+629 info preinstall nan@1.5.3
+630 silly install resolved []
+631 verbose about to build C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\nan
+632 info build C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\nan
+633 verbose linkStuff [ false,
+633 verbose linkStuff   false,
+633 verbose linkStuff   false,
+633 verbose linkStuff   'C:\\Users\\stmulcah\\Documents\\Github\\Photobooth\\node_modules\\zerorpc\\node_modules\\zmq\\node_modules' ]
+634 info linkStuff nan@1.5.3
+635 verbose linkBins nan@1.5.3
+636 verbose linkMans nan@1.5.3
+637 verbose rebuildBundles nan@1.5.3
+638 info install nan@1.5.3
+639 info postinstall nan@1.5.3
+640 verbose unlock done using C:\Users\stmulcah\AppData\Roaming\npm-cache\_locks\nan-93067edc1586f8aa.lock for C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq\node_modules\nan
+641 verbose about to build C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq
+642 info build C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq
+643 verbose linkStuff [ false,
+643 verbose linkStuff   false,
+643 verbose linkStuff   false,
+643 verbose linkStuff   'C:\\Users\\stmulcah\\Documents\\Github\\Photobooth\\node_modules\\zerorpc\\node_modules' ]
+644 info linkStuff zmq@2.11.0
+645 verbose linkBins zmq@2.11.0
+646 verbose linkMans zmq@2.11.0
+647 verbose rebuildBundles zmq@2.11.0
+648 verbose rebuildBundles [ 'bindings', 'nan' ]
+649 info install zmq@2.11.0
+650 info msgpack@0.1.8 Failed to exec install script
+651 verbose unsafe-perm in lifecycle true
+652 verbose unlock done using C:\Users\stmulcah\AppData\Roaming\npm-cache\_locks\msgpack-c96e2164fb2700f8.lock for C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\msgpack
+653 info postinstall zmq@2.11.0
+654 verbose unlock done using C:\Users\stmulcah\AppData\Roaming\npm-cache\_locks\zmq-8c8b1e7c147deb38.lock for C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\zmq
+655 verbose about to build C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc
+656 verbose unlock done using C:\Users\stmulcah\AppData\Roaming\npm-cache\_locks\zerorpc-1b93acf5fb3ccdf5.lock for C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc
+657 verbose stack Error: msgpack@0.1.8 install: `node-gyp rebuild`
+657 verbose stack Exit status 1
+657 verbose stack     at EventEmitter.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\lifecycle.js:213:16)
+657 verbose stack     at EventEmitter.emit (events.js:110:17)
+657 verbose stack     at ChildProcess.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\spawn.js:14:12)
+657 verbose stack     at ChildProcess.emit (events.js:110:17)
+657 verbose stack     at maybeClose (child_process.js:1008:16)
+657 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1080:5)
+658 verbose pkgid msgpack@0.1.8
+659 verbose cwd C:\Users\stmulcah\Documents\Github\Photobooth
+660 error Windows_NT 6.3.9600
+661 error argv "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "zerorpc" "--save"
+662 error node v0.12.1
+663 error npm  v2.5.1
+664 error code ELIFECYCLE
+665 error msgpack@0.1.8 install: `node-gyp rebuild`
+665 error Exit status 1
+666 error Failed at the msgpack@0.1.8 install script 'node-gyp rebuild'.
+666 error This is most likely a problem with the msgpack package,
+666 error not with npm itself.
+666 error Tell the author that this fails on your system:
+666 error     node-gyp rebuild
+666 error You can get their info via:
+666 error     npm owner ls msgpack
+666 error There is likely additional logging output above.
+667 verbose exit [ 1, true ]
+668 verbose unbuild node_modules\zerorpc\node_modules\msgpack
+669 info preuninstall msgpack@0.1.8
+670 info uninstall msgpack@0.1.8
+671 verbose unbuild rmStuff msgpack@0.1.8 from C:\Users\stmulcah\Documents\Github\Photobooth\node_modules
+672 verbose unbuild rmStuff in C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules
+673 verbose gentlyRm verifying that C:\Users\stmulcah\Documents\Github\Photobooth is managed by npm
+674 verbose gentlyRm verifying that C:\Users\stmulcah\Documents\Github\Photobooth is managed by npm
+675 silly isManaged C:\Users\stmulcah\Documents\Github\Photobooth is not inside C:\Users\stmulcah\Documents\Github\Photobooth\node_modules
+676 silly isManaged C:\Users\stmulcah\Documents\Github\Photobooth is not inside C:\Users\stmulcah\Documents\Github\Photobooth\node_modules
+677 silly isManaged C:\Users\stmulcah\Documents\Github\Photobooth is not inside C:\Users\stmulcah\Documents\Github\Photobooth\node_modules
+678 silly isManaged C:\Users\stmulcah\Documents\Github\Photobooth is not inside C:\Users\stmulcah\Documents\Github\Photobooth\node_modules
+679 silly isManaged C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\.bin is inside C:\Users\stmulcah\Documents\Github\Photobooth
+680 silly gentlyRm C:\Users\stmulcah\Documents\Github\Photobooth is managed by npm
+681 silly gentlyRm C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin\json2msgpack.cmd is under C:\Users\stmulcah\Documents\Github\Photobooth
+682 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin\json2msgpack.cmd up to C:\Users\stmulcah\Documents\Github\Photobooth
+683 silly isManaged C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\.bin is inside C:\Users\stmulcah\Documents\Github\Photobooth
+684 silly gentlyRm C:\Users\stmulcah\Documents\Github\Photobooth is managed by npm
+685 silly gentlyRm C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin\msgpack2json.cmd is under C:\Users\stmulcah\Documents\Github\Photobooth
+686 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin\msgpack2json.cmd up to C:\Users\stmulcah\Documents\Github\Photobooth
+687 silly gentlyRm removing C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin\json2msgpack.cmd
+688 silly gentlyRm removing C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin\msgpack2json.cmd
+689 silly gentlyRm quitting because other entries in C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin
+690 verbose gentlyRm verifying that C:\Users\stmulcah\Documents\Github\Photobooth is managed by npm
+691 silly isManaged C:\Users\stmulcah\Documents\Github\Photobooth is not inside C:\Users\stmulcah\Documents\Github\Photobooth\node_modules
+692 silly isManaged C:\Users\stmulcah\Documents\Github\Photobooth is not inside C:\Users\stmulcah\Documents\Github\Photobooth\node_modules
+693 silly isManaged C:\Users\stmulcah\Documents\Github\Photobooth is not inside C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\.bin
+694 silly isManaged C:\Users\stmulcah\Documents\Github\Photobooth is inside C:\Users\stmulcah\Documents\Github\Photobooth
+695 silly gentlyRm C:\Users\stmulcah\Documents\Github\Photobooth is managed by npm
+696 silly gentlyRm C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin\json2msgpack is under C:\Users\stmulcah\Documents\Github\Photobooth
+697 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin\json2msgpack up to C:\Users\stmulcah\Documents\Github\Photobooth
+698 silly gentlyRm quitting because other entries in C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin
+699 verbose gentlyRm verifying that C:\Users\stmulcah\Documents\Github\Photobooth is managed by npm
+700 silly isManaged C:\Users\stmulcah\Documents\Github\Photobooth is not inside C:\Users\stmulcah\Documents\Github\Photobooth\node_modules
+701 silly isManaged C:\Users\stmulcah\Documents\Github\Photobooth is not inside C:\Users\stmulcah\Documents\Github\Photobooth\node_modules
+702 silly isManaged C:\Users\stmulcah\Documents\Github\Photobooth is not inside C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\.bin
+703 silly isManaged C:\Users\stmulcah\Documents\Github\Photobooth is inside C:\Users\stmulcah\Documents\Github\Photobooth
+704 silly gentlyRm C:\Users\stmulcah\Documents\Github\Photobooth is managed by npm
+705 silly gentlyRm C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin\msgpack2json is under C:\Users\stmulcah\Documents\Github\Photobooth
+706 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin\msgpack2json up to C:\Users\stmulcah\Documents\Github\Photobooth
+707 silly gentlyRm removing C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin\json2msgpack
+708 silly gentlyRm removing C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin\msgpack2json
+709 silly gentlyRm removing C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin
+710 silly gentlyRm removing C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin
+711 silly gentlyRm quitting because lost the race to remove C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\.bin
+712 silly gentlyRm quitting because other entries in C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules
+713 info postuninstall msgpack@0.1.8
+714 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\msgpack
+715 silly gentlyRm purging C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules\msgpack
+716 silly gentlyRm quitting because other entries in C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc\node_modules
+717 verbose unbuild node_modules\zerorpc
+718 info preuninstall zerorpc@0.9.3
+719 info uninstall zerorpc@0.9.3
+720 verbose unbuild rmStuff zerorpc@0.9.3 from C:\Users\stmulcah\Documents\Github\Photobooth\node_modules
+721 info postuninstall zerorpc@0.9.3
+722 verbose gentlyRm vacuuming C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc
+723 silly gentlyRm purging C:\Users\stmulcah\Documents\Github\Photobooth\node_modules\zerorpc
+724 silly gentlyRm quitting because other entries in C:\Users\stmulcah\Documents\Github\Photobooth\node_modules

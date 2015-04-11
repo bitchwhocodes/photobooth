@@ -369,11 +369,13 @@ var CountDownView = Backbone.View.extend({
 	initialize:function(obj)
 	{
 		this.counter = 3;
+		this.imagePath = '';
 		this.hasStarted = false;
 		this.classesToAdd =['pink','lime','orange','black','blue'];
 		this.counterItem = $(this.el).find('.countdown');
 		this.number = $(this.el).find('.number');
 		this.myPage = '.pt-page-3';
+		this.hasSentMessage = false;
 		if(this.model){
 			this.model.on('change:ready',this.handleReady,this);
 		}
@@ -396,6 +398,11 @@ var CountDownView = Backbone.View.extend({
 			this.counter = 3;
 			$(this.number).text(this.counter.toString());
 			$('.click-text').addClass('hide');
+			$('.click-text').text('Blast off!');
+			$('.countdown img').removeClass("show").addClass('hide');
+			$('.countdown p').addClass('show').removeClass('hide');
+			$('.click-text').addClass('show animated zoomIn');
+			
 		}
 	},
 
@@ -450,6 +457,7 @@ var CountDownView = Backbone.View.extend({
 			$('.countdown img').removeClass("hide").addClass('show');
 			$('.countdown p').addClass('hide').removeClass('animated zoomIn show');
 			$('.countdown').addClass('animated zoomIn');
+			this.sendMessage();
 		} else if(this.counter==-2)
 		{
 			
@@ -475,27 +483,61 @@ var CountDownView = Backbone.View.extend({
 		}
 	
 	},
+	onTextComplete:function(){
 
+		$('.click-text').removeClass('animated zoomIn');
+
+		
+		$('.click-text').off('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
+		$('.click-text').addClass('show animated zoomIn');
+		$('.click-text').text('Processing... Please Wait!');
+		$('.click-text').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',_.bind(this.onChangeMessage,this));
+
+	},
+
+	onChangeMessage:function(){
+		$('.click-text').removeClass('animated zoomIn');
+		$('.click-text').off('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
+
+	},
+
+	generateUID:function(){
+		var d = new Date().getTime();
+    	var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        	var r = (d + Math.random()*16)%16 | 0;
+        	d = Math.floor(d/16);
+        	return (c=='x' ? r : (r&0x3|0x8)).toString(16);
+    	});
+    	return uuid;
+
+	},
 	sendMessage:function(){
 
-		//console.log("stuff is going");
+		
+		if(this.counter<-1){return;}
+		console.log("send message")
+		this.hasSentMessage = true;
 		this.hasStarted = false;
-		$('.click-text').removeClass('animated zoomIn');
-		console.log("CountdownView : sendMessage");
-		$('.click-text').off('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
+		this.timeStamp = (Math.floor(Date.now() / 1000)).toString();
+		var randomNumber = new Date().getTime();
+		var data ={};
+		var str = randomNumber.toString();
+
+		data.image = str;
+		data.timestamp = this.timeStamp;
+		
+ 
 		
 		$.ajax({
-            url: '/takephoto',
-            type: 'GET',
-            dataType: 'json',
-           
-            contentType: 'application/json',
+            url: 'https://nasaphotobooth.azure-mobile.net/tables/status',
+         	type: 'POST',
+        	data:data,
 
             complete: function() {
                 console.log('CountdownView: complete : process complete');
 
             },
-            success: _.bind(this.handleSuccess,this),
+            success: _.bind(this.onCheckForImage,this),
             error: function() {
                 console.log('CountdownView: error: process error');
             }
@@ -503,18 +545,51 @@ var CountDownView = Backbone.View.extend({
 	
 	},
 
-	handleSuccess:function(data)
+	onCheckForImage:function(data)
 	{
-		$('.showimage').attr('src',data.result);
+		console.log("onCheckForIMage")
+		this.hasSentMessage = false;
+		$.ajax({
+            url: 'https://nasaphotobooth.azure-mobile.net/tables/images?$top=1&$filter=(timestamp%20eq%20'+this.timeStamp+')',
+            type: 'GET',
+           
+           
+            contentType: 'application/json',
+
+            complete: function() {
+                console.log('CountdownView: complete : process complete');
+
+            },
+            success: _.bind(this.handlePhotoChangeCheck,this),
+            error: function() {
+                console.log('CountdownView: error: process error');
+            }
+        });
+		
+
+	},
+	handlePhotoChangeCheck:function(data){
+		console.log(data);
+		console.log(this.timeStamp)
+		if(data.length==0)
+		{
+			this.onCheckForImage();
+		}else{
+			this.handlePhotoChange(data)
+		}
+		
+	},
+
+	handlePhotoChange:function(data){
+
+		$('.showimage').attr('src',data[0].image);
 			this.model.set({
 			'currentpage': '.pt-page-3',
 			'nextpage':'.pt-page-4',
 			'currtransition':'pt-page-moveToLeft',
 			'nexttransition':'pt-page-moveFromRight'
 		});
-
-	}
-	,
+	},
 
 	render:function()
 	{
